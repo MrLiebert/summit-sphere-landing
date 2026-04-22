@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Summit-Sphere — Consultoría y auditoría con y para automatizaciones para empresas que quieren operar al siguiente nivel." />
+  <title>Summit-Sphere | Consultorías y Auditorías</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Cormorant Garamond + DM Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            obsidian: '#0a0a0a',
+            ivory:    '#f7f5f0',
+            stone:    '#e8e4dc',
+            gold:     '#b8962e',
+            'gold-light': '#d4ae4a',
+            mist:     '#f0ede8',
+            slate:    '#4a4a4a',
+          },
+          fontFamily: {
+            display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            body:    ['"DM Sans"', 'system-ui', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-ivory text-obsidian font-body antialiased overflow-x-hidden">
+
+  <!-- ═══════════════════════════════════════════
+       NAVIGATION
+  ════════════════════════════════════════════ -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="flex items-center justify-between h-20">
+
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-3 group">
+          <div class="nav-logo">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="18,3 33,30 3,30" fill="none" stroke="#0a0a0a" stroke-width="2"/>
+              <polygon points="18,11 27,27 9,27" fill="#b8962e" opacity="0.85"/>
+            </svg>
+          </div>
+          <span class="font-display text-xl font-600 tracking-wider uppercase">Summit<span class="text-gold">-</span>Sphere</span>
+        </a>
+
+        <!-- Desktop Nav -->
+        <div class="hidden lg:flex items-center gap-10">
+          <a href="#servicios" class="nav-link text-sm tracking-widest uppercase font-body font-500">Servicios</a>
+          <a href="#nosotros" class="nav-link text-sm tracking-widest uppercase font-body font-500">Nosotros</a>
+          <a href="#metodologia" class="nav-link text-sm tracking-widest uppercase font-body font-500">Metodología</a>
+          <a href="#resenas" class="nav-link text-sm tracking-widest uppercase font-body font-500">Clientes</a>
+          <a href="#contacto" class="nav-link text-sm tracking-widest uppercase font-body font-500">Contacto</a>
+
+          <!-- Academia Button — Reemplazar con href o subdiminio -->
+          <!-- TODO: Conectar con LMS backend o subdominio -->
+          <button id="academia-btn" class="academy-btn px-6 py-2.5 text-sm tracking-widest uppercase font-500 border border-obsidian hover:bg-obsidian hover:text-ivory transition-all duration-300">
+            Acceso Academia
+          </button>
+        </div>
+
+        <!-- Mobile Hamburger -->
+        <button id="menu-toggle" class="lg:hidden flex flex-col gap-1.5 p-2" aria-label="Abrir menú">
+          <span class="hamburger-line w-6 h-px bg-obsidian transition-all duration-300"></span>
+          <span class="hamburger-line w-6 h-px bg-obsidian transition-all duration-300"></span>
+          <span class="hamburger-line w-4 h-px bg-obsidian transition-all duration-300"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu lg:hidden bg-ivory border-t border-stone overflow-hidden max-h-0 transition-all duration-500">
+      <div class="px-6 py-6 flex flex-col gap-6">
+        <a href="#servicios" class="mobile-nav-link text-sm tracking-widest uppercase">Servicios</a>
+        <a href="#nosotros" class="mobile-nav-link text-sm tracking-widest uppercase">Nosotros</a>
+        <a href="#metodologia" class="mobile-nav-link text-sm tracking-widest uppercase">Metodología</a>
+        <a href="#resenas" class="mobile-nav-link text-sm tracking-widest uppercase">Clientes</a>
+        <a href="#contacto" class="mobile-nav-link text-sm tracking-widest uppercase">Contacto</a>
+        <button class="academia-btn-mobile w-full py-3 text-sm tracking-widest uppercase border border-obsidian" id="academia-btn-mobile">
+          Acceso Academia
+        </button>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ═══════════════════════════════════════════
+       HERO SECTION
+  ════════════════════════════════════════════ -->
+  <section id="hero" class="min-h-screen flex flex-col justify-center relative overflow-hidden pt-20">
+    <!-- Background texture -->
+    <div class="hero-texture absolute inset-0 pointer-events-none"></div>
+    <!-- Geometric accent -->
+    <div class="hero-geo absolute right-0 top-0 bottom-0 w-1/3 lg:w-2/5 pointer-events-none hidden md:block"></div>
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10 py-24 lg:py-32">
+      <div class="max-w-3xl">
+
+        <p class="hero-tag text-xs tracking-[0.25em] uppercase text-gold font-500 mb-8 opacity-0">
+          Consultoría &amp; Auditoría
+        </p>
+
+        <h1 class="font-display text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-700 leading-[0.92] mb-8 opacity-0 hero-headline">
+          Procesos<br />
+          <em class="not-italic text-gold">que escalan.</em><br />
+          Resultados<br />
+          que perduran.
+        </h1>
+
+        <p class="text-lg lg:text-xl text-slate font-300 leading-relaxed max-w-xl mb-12 opacity-0 hero-sub">
+          Auditamos, diseñamos e implementamos sistemas que eliminan la fricción operativa y multiplican la capacidad de tu empresa — sin caos en la transición.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 opacity-0 hero-cta">
+          <a href="#contacto" class="cta-primary inline-flex items-center justify-center gap-3 px-10 py-4 bg-obsidian text-ivory text-sm tracking-widest uppercase font-500 hover:bg-gold transition-all duration-400 group">
+            Inicia tu Diagnóstico
+            <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </a>
+          <a href="#metodologia" class="cta-secondary inline-flex items-center justify-center gap-3 px-10 py-4 border border-obsidian text-obsidian text-sm tracking-widest uppercase font-500 hover:border-gold hover:text-gold transition-all duration-400">
+            Ver Metodología
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-0 scroll-hint">
+      <span class="text-xs tracking-[0.2em] uppercase text-slate">Explorar</span>
+      <div class="scroll-line w-px h-12 bg-gradient-to-b from-slate to-transparent"></div>
+    </div>
+
+    <!-- Stats bar -->
+    <div class="absolute bottom-0 left-0 right-0 border-t border-stone/60">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="grid grid-cols-2 lg:grid-cols-4 divide-x divide-stone/60">
+          <div class="py-6 px-6 text-center stat-item opacity-0">
+            <p class="font-display text-3xl lg:text-4xl font-700 text-gold">+120</p>
+            <p class="text-xs tracking-widest uppercase text-slate mt-1">Procesos Auditados</p>
+          </div>
+          <div class="py-6 px-6 text-center stat-item opacity-0">
+            <p class="font-display text-3xl lg:text-4xl font-700 text-gold">68%</p>
+            <p class="text-xs tracking-widest uppercase text-slate mt-1">Reducción de Tiempo Operativo</p>
+          </div>
+          <div class="py-6 px-6 text-center stat-item opacity-0 hidden lg:block">
+            <p class="font-display text-3xl lg:text-4xl font-700 text-gold">40+</p>
+            <p class="text-xs tracking-widest uppercase text-slate mt-1">Empresas Transformadas</p>
+          </div>
+          <div class="py-6 px-6 text-center stat-item opacity-0 hidden lg:block">
+            <p class="font-display text-3xl lg:text-4xl font-700 text-gold">100%</p>
+            <p class="text-xs tracking-widest uppercase text-slate mt-1">Proyectos con ROI Medible</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       SERVICIOS
+  ════════════════════════════════════════════ -->
+  <section id="servicios" class="py-28 lg:py-40 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+
+      <div class="section-header mb-20">
+        <p class="section-tag text-xs tracking-[0.25em] uppercase text-gold font-500 mb-4">Lo que hacemos</p>
+        <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+          <h2 class="font-display text-5xl lg:text-6xl xl:text-7xl font-700 leading-tight max-w-lg">
+            Transforma tus<br /><em class="not-italic">procesos lentos</em><br />en ventajas competitivas.
+          </h2>
+          <p class="text-base text-slate font-300 leading-relaxed max-w-sm lg:text-right">
+            Cada servicio está diseñado para entregar claridad operativa, reducción de costos y sistemas que funcionan mientras tú escalas.
+          </p>
+        </div>
+      </div>
+
+      <!-- Service Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-stone">
+
+        <!-- Card 1 -->
+        <div class="service-card bg-white p-10 group hover:bg-obsidian transition-all duration-500 cursor-default">
+          <div class="service-icon mb-8">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" class="transition-all duration-500 group-hover:stroke-gold" stroke="#b8962e" stroke-width="1.5">
+              <circle cx="20" cy="20" r="16" stroke-dasharray="4 2"/>
+              <path d="M12 20h16M20 12v16" />
+              <circle cx="20" cy="20" r="4" fill="#b8962e" class="transition-all duration-500 group-hover:fill-gold"/>
+            </svg>
+          </div>
+          <p class="service-num text-xs tracking-widest text-stone font-500 mb-3 group-hover:text-slate transition-colors duration-500">01</p>
+          <h3 class="font-display text-2xl font-700 mb-4 group-hover:text-ivory transition-colors duration-500">Auditoría de Procesos</h3>
+          <p class="text-sm text-slate font-300 leading-relaxed mb-6 group-hover:text-stone transition-colors duration-500">
+            Radiografiamos cada flujo operativo de tu empresa. Identificamos cuellos de botella, trabajo duplicado y tareas que no deberían existir. Antes de optimizar, entendemos.
+          </p>
+          <div class="service-tag text-xs tracking-widest uppercase text-gold border-b border-gold pb-1 inline-block group-hover:text-gold-light group-hover:border-gold-light transition-all duration-500">
+            Diagnóstico completo →
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="service-card bg-white p-10 group hover:bg-obsidian transition-all duration-500 cursor-default">
+          <div class="service-icon mb-8">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" class="transition-all duration-500" stroke="#b8962e" stroke-width="1.5">
+              <rect x="6" y="6" width="12" height="12" rx="1"/>
+              <rect x="22" y="6" width="12" height="12" rx="1" fill="#b8962e" opacity="0.3"/>
+              <rect x="6" y="22" width="12" height="12" rx="1" fill="#b8962e" opacity="0.3"/>
+              <rect x="22" y="22" width="12" height="12" rx="1"/>
+            </svg>
+          </div>
+          <p class="service-num text-xs tracking-widest text-stone font-500 mb-3 group-hover:text-slate transition-colors duration-500">02</p>
+          <h3 class="font-display text-2xl font-700 mb-4 group-hover:text-ivory transition-colors duration-500">Diseño de Automatizaciones</h3>
+          <p class="text-sm text-slate font-300 leading-relaxed mb-6 group-hover:text-stone transition-colors duration-500">
+            Construimos flujos de trabajo inteligentes con herramientas como Make, Zapier, n8n y RPA. Cada una para ser robusta, auditable y fácil de mantener.
+          </p>
+          <div class="service-tag text-xs tracking-widest uppercase text-gold border-b border-gold pb-1 inline-block group-hover:text-gold-light group-hover:border-gold-light transition-all duration-500">
+            Ver casos de uso →
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="service-card bg-white p-10 group hover:bg-obsidian transition-all duration-500 cursor-default">
+          <div class="service-icon mb-8">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#b8962e" stroke-width="1.5">
+              <path d="M8 32 L20 8 L32 32" />
+              <path d="M13 22 L27 22" />
+              <circle cx="20" cy="8" r="2" fill="#b8962e"/>
+            </svg>
+          </div>
+          <p class="service-num text-xs tracking-widest text-stone font-500 mb-3 group-hover:text-slate transition-colors duration-500">03</p>
+          <h3 class="font-display text-2xl font-700 mb-4 group-hover:text-ivory transition-colors duration-500">Optimización Continua</h3>
+          <p class="text-sm text-slate font-300 leading-relaxed mb-6 group-hover:text-stone transition-colors duration-500">
+            La optimización no termina al implementar. Monitoreamos KPIs, ajustamos flujos y garantizamos que tus sistemas sigan funcionando mientras tu empresa crece.
+          </p>
+          <div class="service-tag text-xs tracking-widest uppercase text-gold border-b border-gold pb-1 inline-block group-hover:text-gold-light group-hover:border-gold-light transition-all duration-500">
+            Monitoreo →
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="service-card bg-white p-10 group hover:bg-obsidian transition-all duration-500 cursor-default">
+          <div class="service-icon mb-8">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#b8962e" stroke-width="1.5">
+              <path d="M6 20 Q20 6 34 20 Q20 34 6 20Z" fill="#b8962e" opacity="0.15"/>
+              <circle cx="20" cy="20" r="5" fill="#b8962e"/>
+              <path d="M6 20h28M20 6v28" stroke-dasharray="3 3"/>
+            </svg>
+          </div>
+          <p class="service-num text-xs tracking-widest text-stone font-500 mb-3 group-hover:text-slate transition-colors duration-500">04</p>
+          <h3 class="font-display text-2xl font-700 mb-4 group-hover:text-ivory transition-colors duration-500">Integración de Sistemas</h3>
+          <p class="text-sm text-slate font-300 leading-relaxed mb-6 group-hover:text-stone transition-colors duration-500">
+            CRM, ERP, plataformas de e-commerce, herramientas internas — los conectamos para que tu stack tecnológico hable un solo idioma y los datos fluyan sin intervención humana.
+          </p>
+          <div class="service-tag text-xs tracking-widest uppercase text-gold border-b border-gold pb-1 inline-block group-hover:text-gold-light group-hover:border-gold-light transition-all duration-500">
+            Stack compatible →
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="service-card bg-white p-10 group hover:bg-obsidian transition-all duration-500 cursor-default">
+          <div class="service-icon mb-8">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#b8962e" stroke-width="1.5">
+              <rect x="8" y="14" width="24" height="16" rx="2"/>
+              <path d="M14 14V10a6 6 0 0 1 12 0v4"/>
+              <circle cx="20" cy="22" r="3" fill="#b8962e"/>
+            </svg>
+          </div>
+          <p class="service-num text-xs tracking-widest text-stone font-500 mb-3 group-hover:text-slate transition-colors duration-500">05</p>
+          <h3 class="font-display text-2xl font-700 mb-4 group-hover:text-ivory transition-colors duration-500">Capacitación de Equipos</h3>
+          <p class="text-sm text-slate font-300 leading-relaxed mb-6 group-hover:text-stone transition-colors duration-500">
+            No solo implementamos — transferimos conocimiento. Tu equipo aprende a operar, mantener y escalar los nuevos sistemas con confianza y autonomía real.
+          </p>
+          <!-- TODO: Future LMS catalog link — connect to academia.summit-sphere.com -->
+          <div class="service-tag text-xs tracking-widest uppercase text-gold border-b border-gold pb-1 inline-block group-hover:text-gold-light group-hover:border-gold-light transition-all duration-500">
+            Ver Academia →
+          </div>
+        </div>
+
+        <!-- Card 6 — CTA Card -->
+        <div class="service-card bg-obsidian p-10 flex flex-col justify-between min-h-64">
+          <p class="font-display text-3xl font-700 text-ivory leading-tight">¿Tu proceso<br/><em class="not-italic text-gold">está aquí?</em></p>
+          <div>
+            <p class="text-sm text-stone font-300 leading-relaxed mb-8">Si tu operación depende de personas haciendo tareas repetitivas, hay una mejor manera. Hablemos.</p>
+            <a href="#contacto" class="inline-flex items-center gap-3 text-sm tracking-widest uppercase text-gold border-b border-gold pb-1 hover:text-gold-light hover:border-gold-light transition-all duration-300 group">
+              Agendar Consulta
+              <svg class="w-3 h-3 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       QUIÉNES SOMOS
+  ════════════════════════════════════════════ -->
+  <section id="nosotros" class="py-28 lg:py-40 bg-ivory overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+
+        <!-- Text -->
+        <div>
+          <p class="section-tag text-xs tracking-[0.25em] uppercase text-gold font-500 mb-4">Quiénes somos</p>
+          <h2 class="font-display text-5xl lg:text-6xl font-700 leading-tight mb-8">
+            No somos una<br /><em class="not-italic text-gold">agencia de software.</em><br />Somos operadores.
+          </h2>
+          <div class="space-y-5 text-base text-slate font-300 leading-relaxed">
+            <p>Summit-Sphere nació de la frustración de ver empresas con potencial real atrapadas en procesos manuales, errores repetibles y herramientas desconectadas. Fuimos operadores antes de ser consultores.</p>
+            <p>Nuestra filosofía es simple: <strong class="font-500 text-obsidian">entender antes de proponer</strong>. Auditamos con rigor, diseñamos con intención y entregamos con obsesión por los resultados. No vendemos herramientas — resolvemos problemas.</p>
+            <p>Hoy trabajamos con empresas en México que quieren operar con la eficiencia de corporativos Fortune 500, sin necesidad de un departamento de TI de 50 personas.</p>
+          </div>
+
+          <!-- Values -->
+          <div class="grid grid-cols-2 gap-6 mt-12">
+            <div class="value-item border-t border-stone pt-6">
+              <p class="font-display text-lg font-700 mb-2">Claridad</p>
+              <p class="text-xs text-slate font-300 leading-relaxed">Comunicamos resultados en lenguaje de negocio, no tecnicismos.</p>
+            </div>
+            <div class="value-item border-t border-stone pt-6">
+              <p class="font-display text-lg font-700 mb-2">Rigor</p>
+              <p class="text-xs text-slate font-300 leading-relaxed">Cada solución pasa por auditoría interna antes de entregarse.</p>
+            </div>
+            <div class="value-item border-t border-stone pt-6">
+              <p class="font-display text-lg font-700 mb-2">Impacto</p>
+              <p class="text-xs text-slate font-300 leading-relaxed">Medimos el ROI de cada proyecto. Sin resultados, no hay entrega.</p>
+            </div>
+            <div class="value-item border-t border-stone pt-6">
+              <p class="font-display text-lg font-700 mb-2">Transferencia</p>
+              <p class="text-xs text-slate font-300 leading-relaxed">Tu equipo hereda el conocimiento, no crea dependencia de nosotros.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Visual -->
+        <div class="relative">
+          <div class="about-visual-frame relative">
+            <!-- Large geometric shape -->
+            <div class="aspect-[4/5] bg-obsidian relative overflow-hidden">
+              <div class="absolute inset-0 about-pattern"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-10">
+                <p class="font-display text-5xl lg:text-6xl font-700 text-ivory leading-tight">
+                  "La automatización bien ejecutada no reemplaza personas — las <em class="not-italic text-gold">libera</em>."
+                </p>
+              </div>
+            </div>
+            <!-- Gold accent bar -->
+            <div class="absolute -right-3 top-12 bottom-12 w-1 bg-gold"></div>
+            <!-- Floating stat -->
+            <div class="absolute -bottom-8 -left-8 bg-white p-6 border border-stone shadow-lg">
+              <p class="font-display text-4xl font-700 text-gold">3+</p>
+              <p class="text-xs tracking-widest uppercase text-slate mt-1">Años de<br/>Experiencia</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       EQUIPO
+  ════════════════════════════════════════════ -->
+  <section id="equipo" class="py-28 lg:py-40 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+
+      <div class="section-header mb-16">
+        <p class="section-tag text-xs tracking-[0.25em] uppercase text-gold font-500 mb-4">El equipo</p>
+        <h2 class="font-display text-5xl lg:text-6xl font-700 leading-tight">
+          Expertos con<br /><em class="not-italic text-gold">credenciales reales.</em>
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+        <!-- Team Member 1 -->
+        <div class="team-card group">
+          <div class="team-avatar bg-obsidian aspect-square mb-6 relative overflow-hidden flex items-end">
+            <div class="avatar-initials absolute inset-0 flex items-center justify-center">
+              <span class="font-display text-6xl font-700 text-ivory/20">MM</span>
+            </div>
+            <div class="team-card-overlay absolute inset-0 bg-gold opacity-0 group-hover:opacity-10 transition-all duration-500"></div>
+            <div class="relative z-10 p-6">
+              <p class="font-display text-xl font-700 text-ivory">Manuel Maya</p>
+              <p class="text-xs tracking-widest uppercase text-gold">CEO &amp; Fundador</p>
+            </div>
+          </div>
+          <div class="team-bio">
+            <p class="text-sm text-slate font-300 leading-relaxed mb-5">
+              Ex-Director de Operaciones en firma de servicios de Auditoria. Certificado en Lean Six Sigma Black Belt y Automation Anywhere. Más de 60 procesos auditados en los últimos 4 años.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="credential-tag text-xs tracking-widest uppercase px-3 py-1 border border-stone text-slate">Lean Six Sigma</span>
+              <span class="credential-tag text-xs tracking-widest uppercase px-3 py-1 border border-stone text-slate">RPA Certified</span>
+              <span class="credential-tag text-xs tracking-widest uppercase px-3 py-1 border border-stone text-slate">MBA</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Team Member 2 -->
+        <div class="team-card group">
+          <div class="team-avatar bg-stone aspect-square mb-6 relative overflow-hidden flex items-end">
+            <div class="avatar-initials absolute inset-0 flex items-center justify-center">
+              <span class="font-display text-6xl font-700 text-obsidian/10">AR</span>
+            </div>
+            <div class="team-card-overlay absolute inset-0 bg-gold opacity-0 group-hover:opacity-10 transition-all duration-500"></div>
+            <div class="relative z-10 p-6">
+              <p class="font-display text-xl font-700 text-obsidian">Amara Romero</p>
+              <p class="text-xs tracking-widest uppercase text-gold">Directora Técnica</p>
+            </div>
+          </div>
+          <div class="team-bio">
+            <p class="text-sm text-slate font-300 leading-relaxed mb-5">
+              Ingeniera en Biotecnología con especialidad. Make Expert, certified n8n developer y ex-tech lead en startup de logística con 3M de transacciones mensuales.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="credential-tag text-xs tracking-widest uppercase px-3 py-1 border border-stone text-slate">Make Expert</span>
+              <span class="credential-tag text-xs tracking-widest uppercase px-3 py-1 border border-stone text-slate">n8n Dev</span>
+              <span class="credential-tag text-xs tracking-widest uppercase px-3 py-1 border border-stone text-slate">API Design</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Team Member 3
+        <div class="team-card group">
+          <div class="team-avatar bg-obsidian aspect-square mb-6 relative overflow-hidden flex items-end" style="background-color: #1a1a1a;">
+            <div class="avatar-initials absolute inset-0 flex items-center justify-center">
+              <span class="font-display text-6xl font-700 text-ivory/20">CF</span>
+            </div>
+            <div class="team-card-overlay absolute inset-0 bg-gold opacity-0 group-hover:opacity-10 transition-all duration-500"></div>
+            <div class="relative z-10 p-6">
+              <p class="font-display text-xl font-700 text-ivory">Carlos Fuentes</p>
+              <p class="text-xs tracking-widest uppercase text-gold">Estratega de Procesos</p>
+            </div>
+          </div>
+          <div class="team-bio">
+            <p class="text-sm text-slate font-300 leading-relaxed mb-5">
+              Consultor con 8 años en transformación digital para PYMES y corporativos. Especialista en mapeo de procesos BPMN, análisis de datos con Power BI y gestión del cambio organizacional.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="credential-tag text-xs tracking-widest uppercase px-3 py-1 border border-stone text-slate">BPMN Cert.</span>
+              <span class="credential-tag text-xs tracking-widest uppercase px-3 py-1 border border-stone text-slate">Power BI</span>
+              <span class="credential-tag text-xs tracking-widest uppercase px-3 py-1 border border-stone text-slate">Change Mgmt</span>
+            </div>
+          </div>
+        </div>
+        -->
+
+      </div>
+
+      <!-- TODO: Future LMS — Perfiles de Equipo llevan a Perfiles de Instructores en la Academia -->
+      <!-- Social community links -->
+      <div class="mt-16 pt-10 border-t border-stone flex flex-col sm:flex-row items-center justify-between gap-6">
+        <p class="text-sm text-slate font-300">Sigue nuestra comunidad y contenido de auditoría:</p>
+        <div class="flex gap-6">
+          <!-- TODO: Replace # with real LinkedIn company page URL -->
+          <a href="#" class="community-link flex items-center gap-2 text-sm tracking-widest uppercase hover:text-gold transition-colors duration-300 group">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+            LinkedIn
+          </a>
+          <!-- TODO: Replace # with real Facebook community group URL -->
+          <a href="#" class="community-link flex items-center gap-2 text-sm tracking-widest uppercase hover:text-gold transition-colors duration-300 group">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+            Facebook
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       METODOLOGÍA — 3 PASOS
+  ════════════════════════════════════════════ -->
+  <section id="metodologia" class="py-28 lg:py-40 bg-obsidian overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+
+      <div class="section-header mb-20">
+        <p class="section-tag text-xs tracking-[0.25em] uppercase text-gold font-500 mb-4">Cómo trabajamos</p>
+        <h2 class="font-display text-5xl lg:text-6xl font-700 leading-tight text-ivory">
+          Nuestro proceso<br /><em class="not-italic text-gold">en tres etapas.</em>
+        </h2>
+      </div>
+
+      <!-- Process Steps — Full Width Visual -->
+      <div class="process-container relative">
+
+        <!-- Connecting line (desktop) -->
+        <div class="process-line hidden lg:block absolute top-[4.5rem] left-[calc(16.66%+2rem)] right-[calc(16.66%+2rem)] h-px bg-gold/30 z-0"></div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-8 relative z-10">
+
+          <!-- Step 1 -->
+          <div class="process-step group">
+            <div class="process-num-wrap flex items-center gap-4 mb-8">
+              <div class="process-circle w-16 h-16 border border-gold flex items-center justify-center group-hover:bg-gold transition-all duration-500">
+                <span class="font-display text-2xl font-700 text-gold group-hover:text-obsidian transition-colors duration-500">01</span>
+              </div>
+              <div class="process-line-h lg:hidden flex-1 h-px bg-gold/30"></div>
+            </div>
+            <h3 class="font-display text-3xl font-700 text-ivory mb-4">Diagnóstico <em class="not-italic text-gold">Profundo</em></h3>
+            <p class="text-sm text-stone/70 font-300 leading-relaxed mb-6">
+              En 5 días hábiles, mapeamos todos tus procesos críticos usando entrevistas estructuradas y observación directa. Entregamos un mapa de procesos con prioridades de automatización ordenadas por impacto y viabilidad.
+            </p>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3 text-xs text-stone/60 tracking-wide">
+                <span class="text-gold mt-0.5 flex-shrink-0">◆</span>
+                Mapeo BPMN de procesos actuales
+              </li>
+              <li class="flex items-start gap-3 text-xs text-stone/60 tracking-wide">
+                <span class="text-gold mt-0.5 flex-shrink-0">◆</span>
+                Identificación de cuellos de botella
+              </li>
+              <li class="flex items-start gap-3 text-xs text-stone/60 tracking-wide">
+                <span class="text-gold mt-0.5 flex-shrink-0">◆</span>
+                Reporte de oportunidades con ROI estimado
+              </li>
+            </ul>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="process-step group">
+            <div class="process-num-wrap flex items-center gap-4 mb-8">
+              <div class="process-circle w-16 h-16 border border-gold flex items-center justify-center bg-gold group-hover:bg-transparent transition-all duration-500">
+                <span class="font-display text-2xl font-700 text-obsidian group-hover:text-gold transition-colors duration-500">02</span>
+              </div>
+            </div>
+            <h3 class="font-display text-3xl font-700 text-ivory mb-4">Implementación <em class="not-italic text-gold">Estructurada</em></h3>
+            <p class="text-sm text-stone/70 font-300 leading-relaxed mb-6">
+              Diseñamos e implementamos las automatizaciones en sprints de 2 semanas. Cada entregable es probado, documentado y revisado contigo antes de ir a producción. Cero sorpresas.
+            </p>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3 text-xs text-stone/60 tracking-wide">
+                <span class="text-gold mt-0.5 flex-shrink-0">◆</span>
+                Sprints de diseño e integración
+              </li>
+              <li class="flex items-start gap-3 text-xs text-stone/60 tracking-wide">
+                <span class="text-gold mt-0.5 flex-shrink-0">◆</span>
+                Testing riguroso en ambiente de staging
+              </li>
+              <li class="flex items-start gap-3 text-xs text-stone/60 tracking-wide">
+                <span class="text-gold mt-0.5 flex-shrink-0">◆</span>
+                Documentación técnica y de usuario
+              </li>
+            </ul>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="process-step group">
+            <div class="process-num-wrap flex items-center gap-4 mb-8">
+              <div class="process-circle w-16 h-16 border border-gold flex items-center justify-center group-hover:bg-gold transition-all duration-500">
+                <span class="font-display text-2xl font-700 text-gold group-hover:text-obsidian transition-colors duration-500">03</span>
+              </div>
+            </div>
+            <h3 class="font-display text-3xl font-700 text-ivory mb-4">Escala <em class="not-italic text-gold">&amp; Transferencia</em></h3>
+            <p class="text-sm text-stone/70 font-300 leading-relaxed mb-6">
+              Una vez en producción, capacitamos a tu equipo, establecemos métricas de monitoreo y diseñamos el roadmap para las siguientes automatizaciones. Tu empresa queda lista para escalar sola.
+            </p>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3 text-xs text-stone/60 tracking-wide">
+                <span class="text-gold mt-0.5 flex-shrink-0">◆</span>
+                Capacitación práctica del equipo
+              </li>
+              <li class="flex items-start gap-3 text-xs text-stone/60 tracking-wide">
+                <span class="text-gold mt-0.5 flex-shrink-0">◆</span>
+                Dashboard de KPIs operativos
+              </li>
+              <li class="flex items-start gap-3 text-xs text-stone/60 tracking-wide">
+                <span class="text-gold mt-0.5 flex-shrink-0">◆</span>
+                Acceso a academia y comunidad
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Bottom CTA -->
+        <div class="mt-20 pt-12 border-t border-gold/20 flex flex-col sm:flex-row items-center justify-between gap-6">
+          <p class="font-display text-2xl text-ivory">¿Listo para iniciar<br/>tu diagnóstico gratuito?</p>
+          <a href="#contacto" class="inline-flex items-center gap-3 px-10 py-4 bg-gold text-obsidian text-sm tracking-widest uppercase font-500 hover:bg-gold-light transition-all duration-400 group flex-shrink-0">
+            Comenzar Ahora
+            <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       RESEÑAS / TESTIMONIOS
+  ════════════════════════════════════════════ -->
+  <section id="resenas" class="py-28 lg:py-40 bg-ivory">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+
+      <div class="section-header mb-16">
+        <p class="section-tag text-xs tracking-[0.25em] uppercase text-gold font-500 mb-4">Clientes &amp; Experiencias</p>
+        <h2 class="font-display text-5xl lg:text-6xl font-700 leading-tight">
+          Lo que dicen<br /><em class="not-italic text-gold">quienes ya operan mejor.</em>
+        </h2>
+      </div>
+
+      <!-- Testimonials Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-stone">
+
+        <!-- Testimonial 1 - Large -->
+        <div class="testimonial-card bg-white p-10 md:col-span-2 flex flex-col justify-between">
+          <div>
+            <div class="quote-mark font-display text-8xl text-gold/20 leading-none mb-4">"</div>
+            <p class="font-display text-2xl lg:text-3xl font-400 text-obsidian leading-relaxed mb-8">
+              Summit-Sphere no solo automatizó nuestro proceso de onboarding — lo rediseñó desde cero. Lo que nos tomaba 3 días ahora toma 2 horas. Nuestro equipo de ventas duplicó su capacidad sin contratar a nadie más.
+            </p>
+          </div>
+          <div class="flex items-center justify-between border-t border-stone pt-6">
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 bg-obsidian flex items-center justify-center">
+                <span class="text-ivory font-display font-700 text-sm">LM</span>
+              </div>
+              <div>
+                <p class="font-500 text-sm">Laura Medina</p>
+                <p class="text-xs text-slate">COO — Grupo Nexos (México)</p>
+              </div>
+            </div>
+            <div class="flex gap-1">
+              <span class="text-gold text-sm">★★★★★</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card bg-obsidian p-10 flex flex-col justify-between">
+          <div>
+            <div class="quote-mark font-display text-6xl text-gold/30 leading-none mb-4">"</div>
+            <p class="font-display text-xl font-400 text-ivory leading-relaxed mb-8">
+              El diagnóstico inicial fue revelador. No sabíamos cuánto tiempo perdíamos en tareas que podían desaparecer completamente. ROI en menos de 60 días.
+            </p>
+          </div>
+          <div class="border-t border-white/10 pt-6">
+            <div class="flex items-center gap-3 mb-2">
+              <div class="w-8 h-8 bg-gold flex items-center justify-center">
+                <span class="text-obsidian font-display font-700 text-xs">RC</span>
+              </div>
+              <div>
+                <p class="font-500 text-sm text-ivory">Ricardo Castillo</p>
+                <p class="text-xs text-stone/60">CEO — TechFlow Bolivia</p>
+              </div>
+            </div>
+            <div class="flex gap-1">
+              <span class="text-gold text-xs">★★★★★</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card bg-white p-10 flex flex-col justify-between">
+          <div>
+            <div class="quote-mark font-display text-6xl text-gold/20 leading-none mb-4">"</div>
+            <p class="font-display text-xl font-400 text-obsidian leading-relaxed mb-8">
+              Lo que más valoré fue la transferencia de conocimiento. Mi equipo ahora mantiene y escala las automatizaciones sin depender de consultores externos. Eso es independencia real.
+            </p>
+          </div>
+          <div class="border-t border-stone pt-6">
+            <div class="flex items-center gap-3 mb-2">
+              <div class="w-8 h-8 bg-stone flex items-center justify-center">
+                <span class="text-obsidian font-display font-700 text-xs">AP</span>
+              </div>
+              <div>
+                <p class="font-500 text-sm">Andrea Ponce</p>
+                <p class="text-xs text-slate">Directora de Ops — InmoCorp Chile</p>
+              </div>
+            </div>
+            <div class="flex gap-1">
+              <span class="text-gold text-xs">★★★★★</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 4 -->
+        <div class="testimonial-card bg-mist p-10 flex flex-col justify-between">
+          <div>
+            <div class="quote-mark font-display text-6xl text-gold/20 leading-none mb-4">"</div>
+            <p class="font-display text-xl font-400 text-obsidian leading-relaxed mb-8">
+              Llevábamos años sabiendo que necesitábamos automatizar pero no sabíamos por dónde empezar. Summit-Sphere llegó, auditó y en dos semanas teníamos un plan claro con prioridades.
+            </p>
+          </div>
+          <div class="border-t border-stone pt-6">
+            <div class="flex items-center gap-3 mb-2">
+              <div class="w-8 h-8 bg-obsidian flex items-center justify-center">
+                <span class="text-ivory font-display font-700 text-xs">JR</span>
+              </div>
+              <div>
+                <p class="font-500 text-sm">Jorge Romero</p>
+                <p class="text-xs text-slate">Fundador — MediStore Colombia</p>
+              </div>
+            </div>
+            <div class="flex gap-1">
+              <span class="text-gold text-xs">★★★★★</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Testimonial -->
+        <div class="testimonial-card bg-gold p-10 flex flex-col justify-between">
+          <div>
+            <p class="font-display text-3xl font-700 text-obsidian leading-tight mb-6">Tu caso<br/>de éxito<br/>va aquí.</p>
+            <p class="text-sm text-obsidian/70 font-300 leading-relaxed">Únete a los negocios que ya operan de forma más inteligente.</p>
+          </div>
+          <a href="#contacto" class="inline-flex items-center gap-2 text-sm tracking-widest uppercase text-obsidian border-b border-obsidian pb-1 hover:border-obsidian/50 transition-all duration-300 mt-8 group">
+            Empezar →
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Logos / Trust bar -->
+      <div class="mt-16 pt-10 border-t border-stone">
+        <p class="text-xs tracking-[0.2em] uppercase text-slate mb-8 text-center">Empresas que confían en Summit-Sphere</p>
+        <div class="flex flex-wrap items-center justify-center gap-12 opacity-40">
+          <span class="font-display text-2xl font-700 text-slate">Grupo Nexos</span>
+          <span class="font-display text-2xl font-700 text-slate">TechFlow</span>
+          <span class="font-display text-2xl font-700 text-slate">InmoCorp</span>
+          <span class="font-display text-2xl font-700 text-slate">MediStore</span>
+          <span class="font-display text-2xl font-700 text-slate">Corpopatitos</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       CONTACTO
+  ════════════════════════════════════════════ -->
+  <section id="contacto" class="py-28 lg:py-40 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
+
+        <!-- Left: Copy -->
+        <div>
+          <p class="section-tag text-xs tracking-[0.25em] uppercase text-gold font-500 mb-4">Contacto</p>
+          <h2 class="font-display text-5xl lg:text-6xl font-700 leading-tight mb-8">
+            Cuéntanos<br/><em class="not-italic text-gold">tu proceso.</em><br/>Nosotros lo<br/>simplificamos.
+          </h2>
+          <p class="text-base text-slate font-300 leading-relaxed mb-12 max-w-sm">
+            El primer diagnóstico es sin costo. En 30 minutos te decimos si hay oportunidades reales de automatización en tu empresa y cuál sería el impacto estimado.
+          </p>
+          <div class="space-y-6">
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 bg-obsidian flex items-center justify-center flex-shrink-0">
+                <svg class="w-4 h-4 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <div>
+                <p class="text-xs tracking-widest uppercase text-slate mb-1">Email</p>
+                <!-- TODO: Replace with real contact email -->
+                <p class="font-500">contacto@summit-sphere.com</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 bg-obsidian flex items-center justify-center flex-shrink-0">
+                <svg class="w-4 h-4 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                </svg>
+              </div>
+              <div>
+                <p class="text-xs tracking-widest uppercase text-slate mb-1">WhatsApp</p>
+                <!-- TODO: Replace with real WhatsApp number -->
+                <p class="font-500">+52 722 173 9808</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Form -->
+        <!-- TODO: Connect form to backend API or form service (e.g. Formspree, custom endpoint) -->
+        <div class="contact-form-wrapper">
+          <form id="contact-form" class="space-y-0 border border-stone" novalidate>
+            <div class="grid grid-cols-1 sm:grid-cols-2 divide-y sm:divide-y-0 sm:divide-x divide-stone border-b border-stone">
+              <div class="form-field p-6">
+                <label class="block text-xs tracking-widest uppercase text-slate mb-3">Nombre</label>
+                <input type="text" name="nombre" placeholder="Tu nombre completo" required
+                  class="w-full bg-transparent text-sm text-obsidian placeholder-stone focus:outline-none focus:placeholder-transparent transition-all duration-300 font-300" />
+              </div>
+              <div class="form-field p-6">
+                <label class="block text-xs tracking-widest uppercase text-slate mb-3">Empresa</label>
+                <input type="text" name="empresa" placeholder="Nombre de tu empresa"
+                  class="w-full bg-transparent text-sm text-obsidian placeholder-stone focus:outline-none focus:placeholder-transparent transition-all duration-300 font-300" />
+              </div>
+            </div>
+
+            <div class="form-field p-6 border-b border-stone">
+              <label class="block text-xs tracking-widest uppercase text-slate mb-3">Correo Electrónico</label>
+              <input type="email" name="email" placeholder="tu@empresa.com" required
+                class="w-full bg-transparent text-sm text-obsidian placeholder-stone focus:outline-none focus:placeholder-transparent transition-all duration-300 font-300" />
+            </div>
+
+            <div class="form-field p-6 border-b border-stone">
+              <label class="block text-xs tracking-widest uppercase text-slate mb-3">Tema a abordar</label>
+              <select name="tema" class="w-full bg-transparent text-sm text-obsidian focus:outline-none transition-all duration-300 font-300 cursor-pointer appearance-none">
+                <option value="" disabled selected>Selecciona un área</option>
+                <option value="auditoria">Auditoría de Procesos</option>
+                <option value="automatizacion">Diseño de Automatizaciones</option>
+                <option value="integracion">Integración de Sistemas</option>
+                <option value="capacitacion">Capacitación de Equipos</option>
+                <option value="optimizacion">Optimización Continua</option>
+                <option value="otro">Otro / No sé por dónde empezar</option>
+              </select>
+            </div>
+
+            <div class="form-field p-6 border-b border-stone">
+              <label class="block text-xs tracking-widest uppercase text-slate mb-3">Cuéntanos más</label>
+              <textarea name="mensaje" rows="4" placeholder="Describe brevemente tu situación actual — ¿qué proceso te genera más fricción?"
+                class="w-full bg-transparent text-sm text-obsidian placeholder-stone focus:outline-none focus:placeholder-transparent transition-all duration-300 font-300 resize-none"></textarea>
+            </div>
+
+            <div class="p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <p class="text-xs text-slate font-300">Respondemos en menos de 24 horas hábiles.</p>
+              <button type="submit" class="submit-btn inline-flex items-center gap-3 px-8 py-3.5 bg-obsidian text-ivory text-sm tracking-widest uppercase font-500 hover:bg-gold transition-all duration-400 group flex-shrink-0">
+                <span id="submit-text">Enviar Consulta</span>
+                <svg id="submit-arrow" class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+                <svg id="submit-spinner" class="w-4 h-4 animate-spin hidden" fill="none" viewBox="0 0 24 24">
+                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                  <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 12 0 12 12H4z"></path>
+                </svg>
+              </button>
+            </div>
+          </form>
+
+          <!-- Success message -->
+          <div id="form-success" class="hidden mt-4 p-6 bg-obsidian">
+            <p class="font-display text-lg text-ivory">¡Mensaje recibido!</p>
+            <p class="text-sm text-stone/70 font-300 mt-2">Nos pondremos en contacto contigo dentro de las próximas 24 horas. Revisa tu bandeja de entrada.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════ -->
+  <footer class="bg-obsidian pt-20 pb-8">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+
+      <!-- Footer top -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 pb-16 border-b border-white/10">
+
+        <!-- Brand -->
+        <div class="lg:col-span-2">
+          <div class="flex items-center gap-3 mb-6">
+            <svg width="32" height="32" viewBox="0 0 36 36" fill="none">
+              <polygon points="18,3 33,30 3,30" fill="none" stroke="#f7f5f0" stroke-width="2"/>
+              <polygon points="18,11 27,27 9,27" fill="#b8962e" opacity="0.85"/>
+            </svg>
+            <span class="font-display text-lg font-600 tracking-wider uppercase text-ivory">Summit<span class="text-gold">-</span>Sphere</span>
+          </div>
+          <p class="text-sm text-stone/60 font-300 leading-relaxed max-w-xs mb-8">
+            Consultoría y auditoría para empresas que quieren operar al siguiente nivel — sin fricciones, sin caos.
+          </p>
+          <p class="text-xs tracking-[0.2em] uppercase text-stone/40">We believe</p>
+          <p class="font-display text-base italic text-stone/60 mt-2 max-w-xs">
+            "La automatización bien ejecutada no reemplaza personas — las libera."
+          </p>
+        </div>
+
+        <!-- Links: Servicios -->
+        <div>
+          <p class="text-xs tracking-widest uppercase text-stone/40 mb-6">Servicios</p>
+          <ul class="space-y-3">
+            <li><a href="#servicios" class="footer-link text-sm text-stone/60 hover:text-gold transition-colors duration-300">Auditoría de Procesos</a></li>
+            <li><a href="#servicios" class="footer-link text-sm text-stone/60 hover:text-gold transition-colors duration-300">Automatizaciones</a></li>
+            <li><a href="#servicios" class="footer-link text-sm text-stone/60 hover:text-gold transition-colors duration-300">Integración de Sistemas</a></li>
+            <li><a href="#servicios" class="footer-link text-sm text-stone/60 hover:text-gold transition-colors duration-300">Capacitación</a></li>
+            <li><a href="#servicios" class="footer-link text-sm text-stone/60 hover:text-gold transition-colors duration-300">Optimización Continua</a></li>
+          </ul>
+        </div>
+
+        <!-- Links: Empresa -->
+        <div>
+          <p class="text-xs tracking-widest uppercase text-stone/40 mb-6">Empresa</p>
+          <ul class="space-y-3">
+            <li><a href="#nosotros" class="footer-link text-sm text-stone/60 hover:text-gold transition-colors duration-300">Quiénes somos</a></li>
+            <li><a href="#equipo" class="footer-link text-sm text-stone/60 hover:text-gold transition-colors duration-300">El equipo</a></li>
+            <li><a href="#metodologia" class="footer-link text-sm text-stone/60 hover:text-gold transition-colors duration-300">Metodología</a></li>
+            <li><a href="#resenas" class="footer-link text-sm text-stone/60 hover:text-gold transition-colors duration-300">Clientes</a></li>
+            <!-- TODO: Replace with real blog URL when available -->
+            <li><a href="#" class="footer-link text-sm text-stone/60 hover:text-gold transition-colors duration-300">Blog</a></li>
+          </ul>
+        </div>
+
+        <!-- Links: Recursos + Academia -->
+        <div>
+          <p class="text-xs tracking-widest uppercase text-stone/40 mb-6">Recursos</p>
+          <ul class="space-y-3">
+            <!-- TODO: Link to LMS subdomain when ready: academia.summit-sphere.com -->
+            <li>
+              <button class="footer-link text-sm text-stone/60 hover:text-gold transition-colors duration-300 text-left academia-footer-btn">
+                Academia ✦
+              </button>
+            </li>
+            <!-- TODO: Replace # with real Facebook community URL -->
+            <li><a href="#" class="footer-link text-sm text-stone/60 hover:text-gold transition-colors duration-300">Comunidad Facebook</a></li>
+            <!-- TODO: Replace # with real LinkedIn company URL -->
+            <li><a href="#" class="footer-link text-sm text-stone/60 hover:text-gold transition-colors duration-300">LinkedIn</a></li>
+            <li><a href="#contacto" class="footer-link text-sm text-stone/60 hover:text-gold transition-colors duration-300">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer bottom -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-xs text-stone/30 font-300">© <span id="year"></span> Summit-Sphere. Todos los derechos reservados.</p>
+        <div class="flex gap-8">
+          <!-- TODO: Replace # with real legal pages -->
+          <a href="#" class="text-xs text-stone/30 hover:text-stone/60 transition-colors duration-300 tracking-wider uppercase">Términos de Servicio</a>
+          <a href="#" class="text-xs text-stone/30 hover:text-stone/60 transition-colors duration-300 tracking-wider uppercase">Política de Privacidad</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ═══════════════════════════════════════════
+       ACADEMIA MODAL (Próximamente)
+       TODO: Reemplazar con:
+       - Redireccionar a academia.summit-sphere.com, 
+       - Un bloque de autenticación al LMS backend
+       - Integrar catálogo de cursos
+  ════════════════════════════════════════════ -->
+  <div id="academia-modal" class="fixed inset-0 z-[100] flex items-center justify-center p-6 opacity-0 pointer-events-none transition-all duration-500">
+    <!-- Backdrop -->
+    <div id="modal-backdrop" class="absolute inset-0 bg-obsidian/80 backdrop-blur-sm" id="modal-close"></div>
+    <!-- Modal -->
+    <div id="modal-content" class="relative bg-ivory max-w-lg w-full p-12 translate-y-8 transition-all duration-500">
+      <!-- Close button -->
+      <button id="modal-close-btn" class="absolute top-6 right-6 w-8 h-8 flex items-center justify-center hover:bg-stone transition-colors duration-300" aria-label="Cerrar">
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+
+      <!-- Logo -->
+      <div class="flex items-center gap-3 mb-10">
+        <svg width="28" height="28" viewBox="0 0 36 36" fill="none">
+          <polygon points="18,3 33,30 3,30" fill="none" stroke="#0a0a0a" stroke-width="2"/>
+          <polygon points="18,11 27,27 9,27" fill="#b8962e" opacity="0.85"/>
+        </svg>
+        <span class="font-display text-base font-700 tracking-wider uppercase">Summit<span class="text-gold">-</span>Sphere <em class="not-italic font-300 text-gold">Academia</em></span>
+      </div>
+
+      <p class="text-xs tracking-[0.2em] uppercase text-gold font-500 mb-4">Próximamente</p>
+      <h3 class="font-display text-4xl font-700 mb-4 leading-tight">Una academia<br/><em class="not-italic text-gold">diseñada para<br/>operadores.</em></h3>
+      <p class="text-sm text-slate font-300 leading-relaxed mb-10">
+        Cursos prácticos de auditoria, gestión de procesos y herramientas No-Code para que tú y tu equipo escalen sin depender de consultores externos.
+      </p>
+
+      <!-- Early access form -->
+      <!-- TODO: Connect this to your LMS waitlist or CRM -->
+      <div class="space-y-0 border border-stone">
+        <div class="p-5 border-b border-stone">
+          <input type="email" id="academy-email" placeholder="tu@empresa.com"
+            class="w-full bg-transparent text-sm text-obsidian placeholder-stone focus:outline-none font-300" />
+        </div>
+        <button id="academy-subscribe" class="w-full p-5 bg-obsidian text-ivory text-sm tracking-widest uppercase font-500 hover:bg-gold transition-all duration-400 text-center">
+          Quiero Acceso Anticipado
+        </button>
+      </div>
+      <p class="text-xs text-slate font-300 mt-4 text-center">Te notificaremos cuando abramos. Sin spam.</p>
+    </div>
+  </div>
+
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
