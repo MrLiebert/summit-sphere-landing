@@ -3,18 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Summit-Sphere — Consultoría y auditoría con y para automatizaciones para empresas que quieren operar al siguiente nivel." />
-  <title>Summit-Sphere | Consultorías y Auditorías</title>
+  <meta name="description" content="Summit-Sphere — Consultoría, Auditoría e Implementación de Sistemas de Gestión ISO. Socio de confianza para la excelencia empresarial. Metepec, Estado de México." />
+  <title>Summit-Sphere | Consultoría & Sistemas de Gestión</title>
 
-  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Google Fonts: Cormorant Garamond + DM Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
-
-  <!-- Custom Styles -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 
   <script>
@@ -22,13 +17,18 @@
       theme: {
         extend: {
           colors: {
-            obsidian: '#0a0a0a',
-            ivory:    '#f7f5f0',
-            stone:    '#e8e4dc',
-            gold:     '#b8962e',
-            'gold-light': '#d4ae4a',
-            mist:     '#f0ede8',
-            slate:    '#4a4a4a',
+            navy:        '#0d1f35',
+            'navy-deep': '#081528',
+            'navy-mid':  '#132b48',
+            cream:       '#f5f8fc',
+            pearl:       '#e8eef5',
+            green:       '#3dba4e',
+            'green-dark':'#2d9a3c',
+            'green-light':'#5ed46e',
+            cyan:        '#29abe2',
+            'cyan-light':'#4dc3f5',
+            mist:        '#dce8f0',
+            slate:       '#4a6080',
           },
           fontFamily: {
             display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
@@ -40,338 +40,319 @@
   </script>
 </head>
 
-<body class="bg-ivory text-obsidian font-body antialiased overflow-x-hidden">
+<body class="bg-cream text-navy font-body antialiased overflow-x-hidden">
 
-  <!-- ═══════════════════════════════════════════
+  <!-- ══════════════════════════════════════════
        NAVIGATION
-  ════════════════════════════════════════════ -->
+  ═════════════════════════════════════════════ -->
   <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
       <div class="flex items-center justify-between h-20">
 
-        <!-- Logo -->
-        <a href="#" class="flex items-center gap-3 group">
-          <div class="nav-logo">
-            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <polygon points="18,3 33,30 3,30" fill="none" stroke="#0a0a0a" stroke-width="2"/>
-              <polygon points="18,11 27,27 9,27" fill="#b8962e" opacity="0.85"/>
+        <a href="#" class="flex items-center gap-3 group" aria-label="Summit-Sphere inicio">
+          <div class="w-9 h-9 flex-shrink-0">
+            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+              <circle cx="20" cy="20" r="18" stroke="#29abe2" stroke-width="1.2" opacity="0.6"/>
+              <ellipse cx="20" cy="20" rx="11" ry="18" stroke="#3dba4e" stroke-width="2" transform="rotate(-25 20 20)"/>
+              <ellipse cx="20" cy="20" rx="18" ry="8" stroke="#3dba4e" stroke-width="1.5" transform="rotate(-15 20 20)" opacity="0.5"/>
+              <circle cx="20" cy="20" r="3.5" fill="#3dba4e"/>
+              <circle cx="30" cy="16" r="2" fill="#3dba4e"/>
+              <circle cx="11" cy="25" r="1.5" fill="#29abe2"/>
             </svg>
           </div>
-          <span class="font-display text-xl font-600 tracking-wider uppercase">Summit<span class="text-gold">-</span>Sphere</span>
+          <div class="flex flex-col leading-none">
+            <span class="font-display text-xl text-green font-700 tracking-wide">Summit<span class="text-green">-</span>Sphere</span>
+            <span class="text-[9px] tracking-[0.18em] uppercase text-slate font-400 mt-0.5">Consultoría · Sistemas de Gestión</span>
+          </div>
         </a>
 
-        <!-- Desktop Nav -->
-        <div class="hidden lg:flex items-center gap-10">
-          <a href="#servicios" class="nav-link text-sm tracking-widest uppercase font-body font-500">Servicios</a>
-          <a href="#nosotros" class="nav-link text-sm tracking-widest uppercase font-body font-500">Nosotros</a>
-          <a href="#metodologia" class="nav-link text-sm tracking-widest uppercase font-body font-500">Metodología</a>
-          <a href="#resenas" class="nav-link text-sm tracking-widest uppercase font-body font-500">Clientes</a>
-          <a href="#contacto" class="nav-link text-sm tracking-widest uppercase font-body font-500">Contacto</a>
-
-          <!-- Academia Button — Reemplazar con href o subdiminio -->
-          <!-- TODO: Conectar con LMS backend o subdominio -->
-          <button id="academia-btn" class="academy-btn px-6 py-2.5 text-sm tracking-widest uppercase font-500 border border-obsidian hover:bg-obsidian hover:text-ivory transition-all duration-300">
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="#servicios"   class="nav-link text-xs tracking-widest uppercase font-500">Servicios</a>
+          <a href="#nosotros"    class="nav-link text-xs tracking-widest uppercase font-500">Nosotros</a>
+          <a href="#metodologia" class="nav-link text-xs tracking-widest uppercase font-500">Metodología</a>
+          <a href="#resenas"     class="nav-link text-xs tracking-widest uppercase font-500">Clientes</a>
+          <a href="#contacto"    class="nav-link text-xs tracking-widest uppercase font-500">Contacto</a>
+          <!-- TODO: Connect to LMS backend or subdomain academia.summit-sphere.com -->
+          <button id="academia-btn" class="academy-btn flex items-center gap-2 px-5 py-2.5 bg-green text-navy text-xs tracking-widest uppercase font-600 hover:bg-green-dark transition-all duration-300">
+            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
             Acceso Academia
           </button>
         </div>
 
-        <!-- Mobile Hamburger -->
         <button id="menu-toggle" class="lg:hidden flex flex-col gap-1.5 p-2" aria-label="Abrir menú">
-          <span class="hamburger-line w-6 h-px bg-obsidian transition-all duration-300"></span>
-          <span class="hamburger-line w-6 h-px bg-obsidian transition-all duration-300"></span>
-          <span class="hamburger-line w-4 h-px bg-obsidian transition-all duration-300"></span>
+          <span class="hamburger-line w-6 h-px bg-navy transition-all duration-300"></span>
+          <span class="hamburger-line w-6 h-px bg-navy transition-all duration-300"></span>
+          <span class="hamburger-line w-4 h-px bg-navy transition-all duration-300"></span>
         </button>
       </div>
     </div>
 
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="mobile-menu lg:hidden bg-ivory border-t border-stone overflow-hidden max-h-0 transition-all duration-500">
-      <div class="px-6 py-6 flex flex-col gap-6">
-        <a href="#servicios" class="mobile-nav-link text-sm tracking-widest uppercase">Servicios</a>
-        <a href="#nosotros" class="mobile-nav-link text-sm tracking-widest uppercase">Nosotros</a>
-        <a href="#metodologia" class="mobile-nav-link text-sm tracking-widest uppercase">Metodología</a>
-        <a href="#resenas" class="mobile-nav-link text-sm tracking-widest uppercase">Clientes</a>
-        <a href="#contacto" class="mobile-nav-link text-sm tracking-widest uppercase">Contacto</a>
-        <button class="academia-btn-mobile w-full py-3 text-sm tracking-widest uppercase border border-obsidian" id="academia-btn-mobile">
-          Acceso Academia
-        </button>
+    <div id="mobile-menu" class="mobile-menu lg:hidden bg-cream border-t border-pearl overflow-hidden max-h-0 transition-all duration-500">
+      <div class="px-6 py-6 flex flex-col gap-5">
+        <a href="#servicios"   class="mobile-nav-link text-xs tracking-widest uppercase">Servicios</a>
+        <a href="#nosotros"    class="mobile-nav-link text-xs tracking-widest uppercase">Nosotros</a>
+        <a href="#metodologia" class="mobile-nav-link text-xs tracking-widest uppercase">Metodología</a>
+        <a href="#resenas"     class="mobile-nav-link text-xs tracking-widest uppercase">Clientes</a>
+        <a href="#contacto"    class="mobile-nav-link text-xs tracking-widest uppercase">Contacto</a>
+        <button id="academia-btn-mobile" class="w-full py-3 bg-green text-navy text-xs tracking-widest uppercase font-600">Acceso Academia</button>
       </div>
     </div>
   </nav>
 
 
-  <!-- ═══════════════════════════════════════════
-       HERO SECTION
-  ════════════════════════════════════════════ -->
-  <section id="hero" class="min-h-screen flex flex-col justify-center relative overflow-hidden pt-20">
-    <!-- Background texture -->
-    <div class="hero-texture absolute inset-0 pointer-events-none"></div>
-    <!-- Geometric accent -->
-    <div class="hero-geo absolute right-0 top-0 bottom-0 w-1/3 lg:w-2/5 pointer-events-none hidden md:block"></div>
+  <!-- ══════════════════════════════════════════
+       HERO
+  ═════════════════════════════════════════════ -->
+  <section id="hero" class="min-h-screen flex flex-col justify-center relative overflow-hidden pt-20 bg-navy">
+    <div class="hero-orb hero-orb-1 absolute pointer-events-none"></div>
+    <div class="hero-orb hero-orb-2 absolute pointer-events-none"></div>
+    <div class="hero-orb hero-orb-3 absolute pointer-events-none"></div>
+    <div class="hero-grid absolute inset-0 pointer-events-none"></div>
 
-    <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10 py-24 lg:py-32">
-      <div class="max-w-3xl">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10 py-20 lg:py-28">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
-        <p class="hero-tag text-xs tracking-[0.25em] uppercase text-gold font-500 mb-8 opacity-0">
-          Consultoría &amp; Auditoría
-        </p>
-
-        <h1 class="font-display text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-700 leading-[0.92] mb-8 opacity-0 hero-headline">
-          Procesos<br />
-          <em class="not-italic text-gold">que escalan.</em><br />
-          Resultados<br />
-          que perduran.
-        </h1>
-
-        <p class="text-lg lg:text-xl text-slate font-300 leading-relaxed max-w-xl mb-12 opacity-0 hero-sub">
-          Auditamos, diseñamos e implementamos sistemas que eliminan la fricción operativa y multiplican la capacidad de tu empresa — sin caos en la transición.
-        </p>
-
-        <div class="flex flex-col sm:flex-row gap-4 opacity-0 hero-cta">
-          <a href="#contacto" class="cta-primary inline-flex items-center justify-center gap-3 px-10 py-4 bg-obsidian text-ivory text-sm tracking-widest uppercase font-500 hover:bg-gold transition-all duration-400 group">
-            Inicia tu Diagnóstico
-            <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-            </svg>
-          </a>
-          <a href="#metodologia" class="cta-secondary inline-flex items-center justify-center gap-3 px-10 py-4 border border-obsidian text-obsidian text-sm tracking-widest uppercase font-500 hover:border-gold hover:text-gold transition-all duration-400">
-            Ver Metodología
-          </a>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- Scroll indicator -->
-    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-0 scroll-hint">
-      <span class="text-xs tracking-[0.2em] uppercase text-slate">Explorar</span>
-      <div class="scroll-line w-px h-12 bg-gradient-to-b from-slate to-transparent"></div>
-    </div>
-
-    <!-- Stats bar -->
-    <div class="absolute bottom-0 left-0 right-0 border-t border-stone/60">
-      <div class="max-w-7xl mx-auto px-6 lg:px-12">
-        <div class="grid grid-cols-2 lg:grid-cols-4 divide-x divide-stone/60">
-          <div class="py-6 px-6 text-center stat-item opacity-0">
-            <p class="font-display text-3xl lg:text-4xl font-700 text-gold">+120</p>
-            <p class="text-xs tracking-widest uppercase text-slate mt-1">Procesos Auditados</p>
-          </div>
-          <div class="py-6 px-6 text-center stat-item opacity-0">
-            <p class="font-display text-3xl lg:text-4xl font-700 text-gold">68%</p>
-            <p class="text-xs tracking-widest uppercase text-slate mt-1">Reducción de Tiempo Operativo</p>
-          </div>
-          <div class="py-6 px-6 text-center stat-item opacity-0 hidden lg:block">
-            <p class="font-display text-3xl lg:text-4xl font-700 text-gold">40+</p>
-            <p class="text-xs tracking-widest uppercase text-slate mt-1">Empresas Transformadas</p>
-          </div>
-          <div class="py-6 px-6 text-center stat-item opacity-0 hidden lg:block">
-            <p class="font-display text-3xl lg:text-4xl font-700 text-gold">100%</p>
-            <p class="text-xs tracking-widest uppercase text-slate mt-1">Proyectos con ROI Medible</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ═══════════════════════════════════════════
-       SERVICIOS
-  ════════════════════════════════════════════ -->
-  <section id="servicios" class="py-28 lg:py-40 bg-white">
-    <div class="max-w-7xl mx-auto px-6 lg:px-12">
-
-      <div class="section-header mb-20">
-        <p class="section-tag text-xs tracking-[0.25em] uppercase text-gold font-500 mb-4">Lo que hacemos</p>
-        <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
-          <h2 class="font-display text-5xl lg:text-6xl xl:text-7xl font-700 leading-tight max-w-lg">
-            Transforma tus<br /><em class="not-italic">procesos lentos</em><br />en ventajas competitivas.
-          </h2>
-          <p class="text-base text-slate font-300 leading-relaxed max-w-sm lg:text-right">
-            Cada servicio está diseñado para entregar claridad operativa, reducción de costos y sistemas que funcionan mientras tú escalas.
+        <div>
+          <p class="hero-tag text-xs tracking-[0.25em] uppercase text-green font-500 mb-8 opacity-0 flex items-center gap-3">
+            <span class="w-8 h-px bg-green inline-block"></span>
+            Consultoría · Auditoría · Sistemas de Gestión ISO
           </p>
-        </div>
-      </div>
-
-      <!-- Service Cards Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-stone">
-
-        <!-- Card 1 -->
-        <div class="service-card bg-white p-10 group hover:bg-obsidian transition-all duration-500 cursor-default">
-          <div class="service-icon mb-8">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" class="transition-all duration-500 group-hover:stroke-gold" stroke="#b8962e" stroke-width="1.5">
-              <circle cx="20" cy="20" r="16" stroke-dasharray="4 2"/>
-              <path d="M12 20h16M20 12v16" />
-              <circle cx="20" cy="20" r="4" fill="#b8962e" class="transition-all duration-500 group-hover:fill-gold"/>
-            </svg>
-          </div>
-          <p class="service-num text-xs tracking-widest text-stone font-500 mb-3 group-hover:text-slate transition-colors duration-500">01</p>
-          <h3 class="font-display text-2xl font-700 mb-4 group-hover:text-ivory transition-colors duration-500">Auditoría de Procesos</h3>
-          <p class="text-sm text-slate font-300 leading-relaxed mb-6 group-hover:text-stone transition-colors duration-500">
-            Radiografiamos cada flujo operativo de tu empresa. Identificamos cuellos de botella, trabajo duplicado y tareas que no deberían existir. Antes de optimizar, entendemos.
+          <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl xl:text-[82px] font-700 leading-[0.9] mb-8 opacity-0 hero-headline text-cream">
+            Certifica tu<br />
+            <em class="not-italic text-green">organización</em><br />
+            Escala tus<br />
+            estándares
+          </h1>
+          <p class="text-base lg:text-lg text-mist/70 font-300 leading-relaxed max-w-lg mb-12 opacity-0 hero-sub">
+            Somos el socio de confianza de organizaciones en más de 15 sectores para implementar normas ISO, ejecutar auditorías rigurosas y construir la cultura de mejora continua que sostiene el crecimiento.
           </p>
-          <div class="service-tag text-xs tracking-widest uppercase text-gold border-b border-gold pb-1 inline-block group-hover:text-gold-light group-hover:border-gold-light transition-all duration-500">
-            Diagnóstico completo →
-          </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="service-card bg-white p-10 group hover:bg-obsidian transition-all duration-500 cursor-default">
-          <div class="service-icon mb-8">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" class="transition-all duration-500" stroke="#b8962e" stroke-width="1.5">
-              <rect x="6" y="6" width="12" height="12" rx="1"/>
-              <rect x="22" y="6" width="12" height="12" rx="1" fill="#b8962e" opacity="0.3"/>
-              <rect x="6" y="22" width="12" height="12" rx="1" fill="#b8962e" opacity="0.3"/>
-              <rect x="22" y="22" width="12" height="12" rx="1"/>
-            </svg>
-          </div>
-          <p class="service-num text-xs tracking-widest text-stone font-500 mb-3 group-hover:text-slate transition-colors duration-500">02</p>
-          <h3 class="font-display text-2xl font-700 mb-4 group-hover:text-ivory transition-colors duration-500">Diseño de Automatizaciones</h3>
-          <p class="text-sm text-slate font-300 leading-relaxed mb-6 group-hover:text-stone transition-colors duration-500">
-            Construimos flujos de trabajo inteligentes con herramientas como Make, Zapier, n8n y RPA. Cada una para ser robusta, auditable y fácil de mantener.
-          </p>
-          <div class="service-tag text-xs tracking-widest uppercase text-gold border-b border-gold pb-1 inline-block group-hover:text-gold-light group-hover:border-gold-light transition-all duration-500">
-            Ver casos de uso →
-          </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="service-card bg-white p-10 group hover:bg-obsidian transition-all duration-500 cursor-default">
-          <div class="service-icon mb-8">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#b8962e" stroke-width="1.5">
-              <path d="M8 32 L20 8 L32 32" />
-              <path d="M13 22 L27 22" />
-              <circle cx="20" cy="8" r="2" fill="#b8962e"/>
-            </svg>
-          </div>
-          <p class="service-num text-xs tracking-widest text-stone font-500 mb-3 group-hover:text-slate transition-colors duration-500">03</p>
-          <h3 class="font-display text-2xl font-700 mb-4 group-hover:text-ivory transition-colors duration-500">Optimización Continua</h3>
-          <p class="text-sm text-slate font-300 leading-relaxed mb-6 group-hover:text-stone transition-colors duration-500">
-            La optimización no termina al implementar. Monitoreamos KPIs, ajustamos flujos y garantizamos que tus sistemas sigan funcionando mientras tu empresa crece.
-          </p>
-          <div class="service-tag text-xs tracking-widest uppercase text-gold border-b border-gold pb-1 inline-block group-hover:text-gold-light group-hover:border-gold-light transition-all duration-500">
-            Monitoreo →
-          </div>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="service-card bg-white p-10 group hover:bg-obsidian transition-all duration-500 cursor-default">
-          <div class="service-icon mb-8">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#b8962e" stroke-width="1.5">
-              <path d="M6 20 Q20 6 34 20 Q20 34 6 20Z" fill="#b8962e" opacity="0.15"/>
-              <circle cx="20" cy="20" r="5" fill="#b8962e"/>
-              <path d="M6 20h28M20 6v28" stroke-dasharray="3 3"/>
-            </svg>
-          </div>
-          <p class="service-num text-xs tracking-widest text-stone font-500 mb-3 group-hover:text-slate transition-colors duration-500">04</p>
-          <h3 class="font-display text-2xl font-700 mb-4 group-hover:text-ivory transition-colors duration-500">Integración de Sistemas</h3>
-          <p class="text-sm text-slate font-300 leading-relaxed mb-6 group-hover:text-stone transition-colors duration-500">
-            CRM, ERP, plataformas de e-commerce, herramientas internas — los conectamos para que tu stack tecnológico hable un solo idioma y los datos fluyan sin intervención humana.
-          </p>
-          <div class="service-tag text-xs tracking-widest uppercase text-gold border-b border-gold pb-1 inline-block group-hover:text-gold-light group-hover:border-gold-light transition-all duration-500">
-            Stack compatible →
-          </div>
-        </div>
-
-        <!-- Card 5 -->
-        <div class="service-card bg-white p-10 group hover:bg-obsidian transition-all duration-500 cursor-default">
-          <div class="service-icon mb-8">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#b8962e" stroke-width="1.5">
-              <rect x="8" y="14" width="24" height="16" rx="2"/>
-              <path d="M14 14V10a6 6 0 0 1 12 0v4"/>
-              <circle cx="20" cy="22" r="3" fill="#b8962e"/>
-            </svg>
-          </div>
-          <p class="service-num text-xs tracking-widest text-stone font-500 mb-3 group-hover:text-slate transition-colors duration-500">05</p>
-          <h3 class="font-display text-2xl font-700 mb-4 group-hover:text-ivory transition-colors duration-500">Capacitación de Equipos</h3>
-          <p class="text-sm text-slate font-300 leading-relaxed mb-6 group-hover:text-stone transition-colors duration-500">
-            No solo implementamos — transferimos conocimiento. Tu equipo aprende a operar, mantener y escalar los nuevos sistemas con confianza y autonomía real.
-          </p>
-          <!-- TODO: Future LMS catalog link — connect to academia.summit-sphere.com -->
-          <div class="service-tag text-xs tracking-widest uppercase text-gold border-b border-gold pb-1 inline-block group-hover:text-gold-light group-hover:border-gold-light transition-all duration-500">
-            Ver Academia →
-          </div>
-        </div>
-
-        <!-- Card 6 — CTA Card -->
-        <div class="service-card bg-obsidian p-10 flex flex-col justify-between min-h-64">
-          <p class="font-display text-3xl font-700 text-ivory leading-tight">¿Tu proceso<br/><em class="not-italic text-gold">está aquí?</em></p>
-          <div>
-            <p class="text-sm text-stone font-300 leading-relaxed mb-8">Si tu operación depende de personas haciendo tareas repetitivas, hay una mejor manera. Hablemos.</p>
-            <a href="#contacto" class="inline-flex items-center gap-3 text-sm tracking-widest uppercase text-gold border-b border-gold pb-1 hover:text-gold-light hover:border-gold-light transition-all duration-300 group">
-              Agendar Consulta
-              <svg class="w-3 h-3 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-              </svg>
+          <div class="flex flex-col sm:flex-row gap-4 opacity-0 hero-cta">
+            <a href="#contacto" class="cta-primary inline-flex items-center justify-center gap-3 px-10 py-4 bg-green text-navy text-xs tracking-widest uppercase font-600 hover:bg-green-light transition-all duration-400 group">
+              Diagnóstico sin costo
+              <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+            <a href="#servicios" class="inline-flex items-center justify-center gap-3 px-10 py-4 border border-mist/25 text-cream text-xs tracking-widest uppercase font-500 hover:border-green hover:text-green transition-all duration-400">
+              Nuestros Servicios
             </a>
           </div>
         </div>
 
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ═══════════════════════════════════════════
-       QUIÉNES SOMOS
-  ════════════════════════════════════════════ -->
-  <section id="nosotros" class="py-28 lg:py-40 bg-ivory overflow-hidden">
-    <div class="max-w-7xl mx-auto px-6 lg:px-12">
-
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-
-        <!-- Text -->
-        <div>
-          <p class="section-tag text-xs tracking-[0.25em] uppercase text-gold font-500 mb-4">Quiénes somos</p>
-          <h2 class="font-display text-5xl lg:text-6xl font-700 leading-tight mb-8">
-            No somos una<br /><em class="not-italic text-gold">agencia de software.</em><br />Somos operadores.
-          </h2>
-          <div class="space-y-5 text-base text-slate font-300 leading-relaxed">
-            <p>Summit-Sphere nació de la frustración de ver empresas con potencial real atrapadas en procesos manuales, errores repetibles y herramientas desconectadas. Fuimos operadores antes de ser consultores.</p>
-            <p>Nuestra filosofía es simple: <strong class="font-500 text-obsidian">entender antes de proponer</strong>. Auditamos con rigor, diseñamos con intención y entregamos con obsesión por los resultados. No vendemos herramientas — resolvemos problemas.</p>
-            <p>Hoy trabajamos con empresas en México que quieren operar con la eficiencia de corporativos Fortune 500, sin necesidad de un departamento de TI de 50 personas.</p>
-          </div>
-
-          <!-- Values -->
-          <div class="grid grid-cols-2 gap-6 mt-12">
-            <div class="value-item border-t border-stone pt-6">
-              <p class="font-display text-lg font-700 mb-2">Claridad</p>
-              <p class="text-xs text-slate font-300 leading-relaxed">Comunicamos resultados en lenguaje de negocio, no tecnicismos.</p>
-            </div>
-            <div class="value-item border-t border-stone pt-6">
-              <p class="font-display text-lg font-700 mb-2">Rigor</p>
-              <p class="text-xs text-slate font-300 leading-relaxed">Cada solución pasa por auditoría interna antes de entregarse.</p>
-            </div>
-            <div class="value-item border-t border-stone pt-6">
-              <p class="font-display text-lg font-700 mb-2">Impacto</p>
-              <p class="text-xs text-slate font-300 leading-relaxed">Medimos el ROI de cada proyecto. Sin resultados, no hay entrega.</p>
-            </div>
-            <div class="value-item border-t border-stone pt-6">
-              <p class="font-display text-lg font-700 mb-2">Transferencia</p>
-              <p class="text-xs text-slate font-300 leading-relaxed">Tu equipo hereda el conocimiento, no crea dependencia de nosotros.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Visual -->
-        <div class="relative">
-          <div class="about-visual-frame relative">
-            <!-- Large geometric shape -->
-            <div class="aspect-[4/5] bg-obsidian relative overflow-hidden">
-              <div class="absolute inset-0 about-pattern"></div>
-              <div class="absolute bottom-0 left-0 right-0 p-10">
-                <p class="font-display text-5xl lg:text-6xl font-700 text-ivory leading-tight">
-                  "La automatización bien ejecutada no reemplaza personas — las <em class="not-italic text-gold">libera</em>."
-                </p>
+        <!-- Orbital sphere hero visual -->
+        <div class="hidden lg:flex items-center justify-center opacity-0 hero-sphere-wrap">
+          <div class="hero-sphere-container relative w-80 h-80 xl:w-96 xl:h-96">
+            <div class="sphere-ring sphere-ring-1 absolute inset-0"></div>
+            <div class="sphere-ring sphere-ring-2 absolute inset-6"></div>
+            <div class="sphere-ring sphere-ring-3 absolute inset-12"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="sphere-center w-20 h-20 rounded-full">
+                <div class="sphere-inner absolute inset-2 rounded-full"></div>
               </div>
             </div>
-            <!-- Gold accent bar -->
-            <div class="absolute -right-3 top-12 bottom-12 w-1 bg-gold"></div>
-            <!-- Floating stat -->
-            <div class="absolute -bottom-8 -left-8 bg-white p-6 border border-stone shadow-lg">
-              <p class="font-display text-4xl font-700 text-gold">3+</p>
-              <p class="text-xs tracking-widest uppercase text-slate mt-1">Años de<br/>Experiencia</p>
-            </div>
+            <div class="orbit-dot orbit-dot-1 absolute w-3 h-3 rounded-full bg-green"></div>
+            <div class="orbit-dot orbit-dot-2 absolute w-2 h-2 rounded-full bg-cyan"></div>
+            <div class="orbit-dot orbit-dot-3 absolute w-2.5 h-2.5 rounded-full bg-green-light"></div>
+            <div class="iso-badge iso-badge-float-1 absolute -top-4 -right-2 px-3 py-1.5 bg-navy-mid border border-green/30 text-green text-xs tracking-widest font-500">ISO 9001</div>
+            <div class="iso-badge iso-badge-float-2 absolute -bottom-4 -left-4 px-3 py-1.5 bg-navy-mid border border-cyan/30 text-cyan text-xs tracking-widest font-500">ISO 45001</div>
+            <div class="iso-badge iso-badge-float-3 absolute top-1/3 -right-14 px-3 py-1.5 bg-navy-mid border border-green/20 text-mist/60 text-xs tracking-widest font-500">ISO 14001</div>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="relative z-10 border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="grid grid-cols-2 lg:grid-cols-4 divide-x divide-white/10">
+          <div class="py-6 px-6 text-center stat-item opacity-0">
+            <p class="font-display text-3xl lg:text-4xl font-700 text-green">2020</p>
+            <p class="text-xs tracking-widest uppercase text-mist/40 mt-1">Año de Fundación</p>
+          </div>
+          <div class="py-6 px-6 text-center stat-item opacity-0">
+            <p class="font-display text-3xl lg:text-4xl font-700 text-green">12+</p>
+            <p class="text-xs tracking-widest uppercase text-mist/40 mt-1">Normas ISO</p>
+          </div>
+          <div class="py-6 px-6 text-center stat-item opacity-0 hidden lg:block">
+            <p class="font-display text-3xl lg:text-4xl font-700 text-green">15+</p>
+            <p class="text-xs tracking-widest uppercase text-mist/40 mt-1">Sectores Atendidos</p>
+          </div>
+          <div class="py-6 px-6 text-center stat-item opacity-0 hidden lg:block">
+            <p class="font-display text-3xl lg:text-4xl font-700 text-green">8+</p>
+            <p class="text-xs tracking-widest uppercase text-mist/40 mt-1">Años de Experiencia</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+   <!--  ══════════════════════════════════════════
+       SERVICIOS
+  ═════════════════════════════════════════════ -->
+  <section id="servicios" class="py-28 lg:py-40 bg-cream">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+
+      <div class="section-header mb-20 reveal">
+        <p class="section-tag text-xs tracking-[0.25em] uppercase text-green font-500 mb-4">Lo que hacemos</p>
+        <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+          <h2 class="font-display text-5xl lg:text-6xl xl:text-7xl font-700 leading-tight max-w-xl">
+            Soluciones integrales<br /><em class="not-italic text-green">para cada norma,</em><br />cada sector.
+          </h2>
+          <p class="text-sm text-slate font-300 leading-relaxed max-w-xs">
+            Proyectos a la medida que instalan una filosofía de mejora continua en todos tus procesos: operativos, estratégicos y de soporte.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-pearl">
+
+        <div class="service-card bg-white p-10 group hover:bg-navy transition-all duration-500 cursor-default">
+          <div class="service-icon mb-8">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#5bb82e" stroke-width="1.5">
+              <rect x="6" y="4" width="22" height="30" rx="2"/>
+              <path d="M11 13h12M11 18h12M11 23h7"/>
+              <circle cx="31" cy="30" r="6" fill="#0d1f35" stroke="#5bb82e"/>
+              <path d="M28 30l2 2 4-4" stroke="#5bb82e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <p class="text-xs tracking-widest text-stone font-500 mb-3 group-hover:text-white/30 transition-colors duration-500">01</p>
+          <h3 class="font-display text-2xl font-700 mb-4 text-navy group-hover:text-white transition-colors duration-500">Implementación de Sistemas de Gestión</h3>
+          <p class="text-sm text-slate font-300 leading-relaxed mb-6 group-hover:text-white/60 transition-colors duration-500">
+            Implementación particular o integral de normas ISO: Calidad 9001, Dispositivos Médicos 13485, Medio Ambiente 14001, Seguridad y Salud 45001, Seguridad de la Información 27001, Antisoborno 37001, Continuidad de Negocio 22301 y más.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="iso-tag text-xs px-2 py-1 border border-stone text-slate group-hover:border-green/40 group-hover:text-green transition-all duration-500">ISO 9001</span>
+            <span class="iso-tag text-xs px-2 py-1 border border-stone text-slate group-hover:border-green/40 group-hover:text-green transition-all duration-500">ISO 13485</span>
+            <span class="iso-tag text-xs px-2 py-1 border border-stone text-slate group-hover:border-green/40 group-hover:text-green transition-all duration-500">ISO 14001</span>
+            <span class="iso-tag text-xs px-2 py-1 border border-stone text-slate group-hover:border-green/40 group-hover:text-green transition-all duration-500">+8 más</span>
+          </div>
+          <div class="text-xs tracking-widest uppercase text-green border-b border-green pb-1 inline-block group-hover:text-green-light group-hover:border-green-light transition-all duration-500">Ver normas →</div>
+        </div>
+
+        <div class="service-card bg-white p-10 group hover:bg-navy transition-all duration-500 cursor-default">
+          <div class="service-icon mb-8">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#5bb82e" stroke-width="1.5">
+              <circle cx="18" cy="18" r="11"/>
+              <path d="M26.5 26.5 L34 34" stroke-linecap="round" stroke-width="2.5"/>
+              <path d="M14 18h8M18 14v8" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <p class="text-xs tracking-widest text-stone font-500 mb-3 group-hover:text-white/30 transition-colors duration-500">02</p>
+          <h3 class="font-display text-2xl font-700 mb-4 text-navy group-hover:text-white transition-colors duration-500">Auditorías</h3>
+          <p class="text-sm text-slate font-300 leading-relaxed mb-6 group-hover:text-white/60 transition-colors duration-500">
+            Apoyo a equipos de Calidad y Compras para auditar proveedores y corresponsales de riesgo. Auditorías de primera, segunda y tercera parte bajo ISO 9001, 13485, 14001, 27001, 37001, 22301, NMX-R-026 y otras.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="iso-tag text-xs px-2 py-1 border border-stone text-slate group-hover:border-cyan/40 group-hover:text-cyan transition-all duration-500">1ª Parte</span>
+            <span class="iso-tag text-xs px-2 py-1 border border-stone text-slate group-hover:border-cyan/40 group-hover:text-cyan transition-all duration-500">2ª Parte</span>
+            <span class="iso-tag text-xs px-2 py-1 border border-stone text-slate group-hover:border-cyan/40 group-hover:text-cyan transition-all duration-500">3ª Parte</span>
+          </div>
+          <div class="text-xs tracking-widest uppercase text-green border-b border-green pb-1 inline-block group-hover:text-green-light group-hover:border-green-light transition-all duration-500">Conocer más →</div>
+        </div>
+
+        <div class="service-card bg-white p-10 group hover:bg-navy transition-all duration-500 cursor-default">
+          <div class="service-icon mb-8">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#5bb82e" stroke-width="1.5">
+              <path d="M8 32V18l12-12 12 12v14H24v-8h-8v8H8z"/>
+              <circle cx="20" cy="20" r="3" fill="#5bb82e"/>
+            </svg>
+          </div>
+          <p class="text-xs tracking-widest text-stone font-500 mb-3 group-hover:text-white/30 transition-colors duration-500">03</p>
+          <h3 class="font-display text-2xl font-700 mb-4 text-navy group-hover:text-white transition-colors duration-500">Consultoría Especializada</h3>
+          <p class="text-sm text-slate font-300 leading-relaxed mb-6 group-hover:text-white/60 transition-colors duration-500">
+            Estandarización de procesos, mejora continua, cumplimiento de contratos, optimización de procesos y gobierno corporativo. Soluciones a la medida del modelo de negocio de cada cliente.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="iso-tag text-xs px-2 py-1 border border-stone text-slate group-hover:border-green/40 group-hover:text-green transition-all duration-500">Mejora Continua</span>
+            <span class="iso-tag text-xs px-2 py-1 border border-stone text-slate group-hover:border-green/40 group-hover:text-green transition-all duration-500">Gobierno Corp.</span>
+          </div>
+          <div class="text-xs tracking-widest uppercase text-green border-b border-green pb-1 inline-block group-hover:text-green-light group-hover:border-green-light transition-all duration-500">Ver alcance →</div>
+        </div>
+
+        <div class="service-card bg-white p-10 group hover:bg-navy transition-all duration-500 cursor-default">
+          <div class="service-icon mb-8">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#5bb82e" stroke-width="1.5">
+              <path d="M20 6 L36 14 L20 22 L4 14 Z"/>
+              <path d="M4 14v10M36 14v10M10 17v10c0 3 4.5 7 10 7s10-4 10-7V17"/>
+            </svg>
+          </div>
+          <p class="text-xs tracking-widest text-stone font-500 mb-3 group-hover:text-white/30 transition-colors duration-500">04</p>
+          <h3 class="font-display text-2xl font-700 mb-4 text-navy group-hover:text-white transition-colors duration-500">Capacitación Interna</h3>
+          <p class="text-sm text-slate font-300 leading-relaxed mb-6 group-hover:text-white/60 transition-colors duration-500">
+            Formamos a tu equipo en interpretación de normas, operación de Sistemas de Gestión Integrados, metodologías de acción correctiva y cultura de mejora continua sostenible.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="iso-tag text-xs px-2 py-1 border border-stone text-slate group-hover:border-cyan/40 group-hover:text-cyan transition-all duration-500">Normas ISO</span>
+            <span class="iso-tag text-xs px-2 py-1 border border-stone text-slate group-hover:border-cyan/40 group-hover:text-cyan transition-all duration-500">SGI</span>
+            <span class="iso-tag text-xs px-2 py-1 border border-stone text-slate group-hover:border-cyan/40 group-hover:text-cyan transition-all duration-500">CAPA</span>
+          </div>
+          <!-- TODO: Future LMS link: academia.summit-sphere.com -->
+          <div class="text-xs tracking-widest uppercase text-green border-b border-green pb-1 inline-block group-hover:text-green-light group-hover:border-green-light transition-all duration-500">Ver Academia →</div>
+        </div>
+
+        <div class="service-card bg-white p-10 group hover:bg-navy transition-all duration-500 cursor-default">
+          <div class="service-icon mb-8">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#5bb82e" stroke-width="1.5">
+              <path d="M8 26c0-9 8-18 24-18" stroke-linecap="round"/>
+              <path d="M32 8 L28 16 L20 12 Z" fill="#5bb82e"/>
+              <path d="M10 32 L8 26 L14 26 Z" fill="#5bb82e"/>
+            </svg>
+          </div>
+          <p class="text-xs tracking-widest text-stone font-500 mb-3 group-hover:text-white/30 transition-colors duration-500">05</p>
+          <h3 class="font-display text-2xl font-700 mb-4 text-navy group-hover:text-white transition-colors duration-500">Optimización de Procesos</h3>
+          <p class="text-sm text-slate font-300 leading-relaxed mb-6 group-hover:text-white/60 transition-colors duration-500">
+            Instalamos una filosofía de mejora continua en todos los procesos operativos, estratégicos y de soporte. Medimos, analizamos y optimizamos con metodologías probadas adecuadas a tu sector.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="iso-tag text-xs px-2 py-1 border border-stone text-slate group-hover:border-green/40 group-hover:text-green transition-all duration-500">Eficiencia Op.</span>
+            <span class="iso-tag text-xs px-2 py-1 border border-stone text-slate group-hover:border-green/40 group-hover:text-green transition-all duration-500">KPIs</span>
+          </div>
+          <div class="text-xs tracking-widest uppercase text-green border-b border-green pb-1 inline-block group-hover:text-green-light group-hover:border-green-light transition-all duration-500">Diagnóstico →</div>
+        </div>
+
+        <div class="service-card bg-navy p-10 flex flex-col justify-between min-h-64">
+          <div>
+            <p class="font-display text-3xl font-700 text-white leading-tight mb-4">¿Tu empresa necesita<br/><em class="not-italic text-green">certificarse?</em></p>
+            <p class="text-sm text-white/50 font-300 leading-relaxed mb-8">Trabajamos a la medida de cada cliente. Cuéntanos tu situación y diseñamos el plan.</p>
+          </div>
+          <a href="#contacto" class="inline-flex items-center gap-3 text-xs tracking-widest uppercase text-green border-b border-green pb-1 hover:text-green-light hover:border-green-light transition-all duration-300 group">
+            Contactar ahora
+            <svg class="w-3 h-3 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+
+        <!-- ISO Norms grid (full width col-span) -->
+        <div class="bg-navy p-10 md:col-span-2 reveal">
+          <p class="text-xs tracking-[0.25em] uppercase text-green font-500 mb-2 flex items-center gap-3">
+            <span class="w-5 h-px bg-green inline-block"></span>
+            Normas que implementamos y auditamos
+          </p>
+          <p class="text-xs text-mist/40 font-300 mb-8">ISO 9001 · ISO 13485 · ISO 14001 · ISO 45001 · ISO 27001 · ISO 37001 · ISO 22301 · ISO 37301 · ISO 28000 · ISO 22317 · NMX-R-026</p>
+          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+            <div class="iso-card"><p class="font-display text-sm font-700 text-cream">ISO 9001</p><p class="text-xs text-mist/40 mt-1">Calidad</p></div>
+            <div class="iso-card"><p class="font-display text-sm font-700 text-cream">ISO 13485</p><p class="text-xs text-mist/40 mt-1">Dispositivos Médicos</p></div>
+            <div class="iso-card"><p class="font-display text-sm font-700 text-cream">ISO 14001</p><p class="text-xs text-mist/40 mt-1">Medio Ambiente</p></div>
+            <div class="iso-card"><p class="font-display text-sm font-700 text-cream">ISO 45001</p><p class="text-xs text-mist/40 mt-1">Seguridad y Salud</p></div>
+            <div class="iso-card"><p class="font-display text-sm font-700 text-cream">ISO 27001</p><p class="text-xs text-mist/40 mt-1">Seg. Información</p></div>
+            <div class="iso-card"><p class="font-display text-sm font-700 text-cream">ISO 37001</p><p class="text-xs text-mist/40 mt-1">Antisoborno</p></div>
+            <div class="iso-card"><p class="font-display text-sm font-700 text-cream">ISO 22301</p><p class="text-xs text-mist/40 mt-1">Continuidad Negocio</p></div>
+            <div class="iso-card"><p class="font-display text-sm font-700 text-cream">ISO 37301</p><p class="text-xs text-mist/40 mt-1">Compliance</p></div>
+            <div class="iso-card"><p class="font-display text-sm font-700 text-cream">ISO 28000</p><p class="text-xs text-mist/40 mt-1">Cadena de Suministro</p></div>
+            <div class="iso-card"><p class="font-display text-sm font-700 text-cream">ISO 22317</p><p class="text-xs text-mist/40 mt-1">Impacto en Negocio</p></div>
+            <div class="iso-card border-green/40"><p class="font-display text-sm font-700 text-green">NMX-R-026</p><p class="text-xs text-mist/40 mt-1">Agente Aduanal</p></div>
+            <div class="iso-card border-dashed border-green/15 flex items-center justify-center"><p class="text-xs text-mist/30 font-300 text-center">Más normas<br/>a la medida</p></div>
+          </div>
+        </div>
+
+        <!-- Benefits -->
+        <div class="bg-green p-10 reveal">
+          <p class="text-xs tracking-widest uppercase text-navy/50 mb-6 font-500">Beneficios de certificar</p>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3"><span class="text-navy mt-0.5 flex-shrink-0 font-700">◆</span><span class="text-sm text-navy font-400">Acceso a nuevos mercados y licitaciones</span></li>
+            <li class="flex items-start gap-3"><span class="text-navy mt-0.5 flex-shrink-0 font-700">◆</span><span class="text-sm text-navy font-400">Mejora en la satisfacción del cliente</span></li>
+            <li class="flex items-start gap-3"><span class="text-navy mt-0.5 flex-shrink-0 font-700">◆</span><span class="text-sm text-navy font-400">Eficiencia operativa comprobada</span></li>
+            <li class="flex items-start gap-3"><span class="text-navy mt-0.5 flex-shrink-0 font-700">◆</span><span class="text-sm text-navy font-400">Cultura de mejora continua instalada</span></li>
+            <li class="flex items-start gap-3"><span class="text-navy mt-0.5 flex-shrink-0 font-700">◆</span><span class="text-sm text-navy font-400">Mejora de imagen corporativa</span></li>
+          </ul>
+          <a href="#contacto" class="inline-flex items-center gap-2 text-xs tracking-widest uppercase text-navy border-b border-navy/30 pb-1 mt-8 hover:border-navy transition-all duration-300 font-600">Iniciar ahora →</a>
         </div>
 
       </div>
@@ -379,488 +360,476 @@
   </section>
 
 
-  <!-- ═══════════════════════════════════════════
+  <!-- ══════════════════════════════════════════
+       QUIÉNES SOMOS
+  ═════════════════════════════════════════════ -->
+  <section id="nosotros" class="py-28 lg:py-40 bg-navy overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+
+        <!-- Visual -->
+        <div class="relative reveal-left">
+          <div class="aspect-[4/5] bg-navy-mid border border-green/10 relative overflow-hidden">
+            <div class="about-pattern absolute inset-0"></div>
+            <div class="absolute inset-0 flex items-center justify-center opacity-15">
+              <svg viewBox="0 0 300 300" class="w-72 h-72" fill="none">
+                <circle cx="150" cy="150" r="140" stroke="#29abe2" stroke-width="1"/>
+                <ellipse cx="150" cy="150" rx="80" ry="140" stroke="#3dba4e" stroke-width="2" transform="rotate(-30 150 150)"/>
+                <ellipse cx="150" cy="150" rx="140" ry="55" stroke="#3dba4e" stroke-width="1.5"/>
+                <ellipse cx="150" cy="150" rx="140" ry="55" stroke="#3dba4e" stroke-width="1" opacity="0.4" transform="rotate(60 150 150)"/>
+                <circle cx="150" cy="150" r="18" fill="#3dba4e" opacity="0.5"/>
+                <circle cx="150" cy="150" r="8" fill="#3dba4e"/>
+              </svg>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 p-10">
+              <p class="font-display text-3xl lg:text-4xl font-700 text-cream leading-snug">
+                "Ser el socio de <em class="not-italic text-green">confianza</em> que impulsa el crecimiento y la excelencia."
+              </p>
+              <p class="text-xs tracking-widest uppercase text-mist/30 mt-4 font-300">— Misión Summit-Sphere</p>
+            </div>
+          </div>
+          <!--
+          <div class="absolute -right-3 top-12 bottom-12 w-0.5 bg-gradient-to-b from-green via-cyan to-transparent"></div>
+          <div class="absolute -bottom-8 -left-6 bg-cream p-6 border border-pearl shadow-xl">
+            <p class="font-display text-4xl font-700 text-green">2020</p>
+            <p class="text-xs tracking-widest uppercase text-slate mt-1">Fundación<br/>Metepec, Méx.</p>
+          </div>
+          -->
+
+        </div>
+        
+
+        <!-- Text -->
+        <div class="reveal-right">
+          <p class="section-tag-light text-xs tracking-[0.25em] uppercase text-green font-500 mb-4">Quiénes somos</p>
+          <h2 class="font-display text-5xl lg:text-6xl font-700 leading-tight mb-8 text-cream">
+            No solo consultores.<br /><em class="not-italic text-green">Tu aliado</em><br />estratégico.
+          </h2>
+          <div class="space-y-5 text-sm text-mist/65 font-300 leading-relaxed">
+            <p>Summit-Sphere es una firma de consultoría fundada en 2020 en Metepec, Estado de México. Actuamos como socio de confianza para impulsar la eficiencia y la excelencia empresarial mediante servicios integrales de Consultoría, Mejora Continua, Implementación de Sistemas de Gestión, Auditoría, Optimización de Procesos y Capacitación.</p>
+            <p>Trabajamos a la medida de cada cliente, creando proyectos personalizados para instalar una <strong class="text-cream font-500">filosofía de mejora continua</strong> en todos sus procesos: operativos, estratégicos y de soporte.</p>
+          </div>
+
+          <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="border border-green/20 p-6 bg-navy-mid">
+              <p class="text-xs tracking-widest uppercase text-green mb-3 font-500">Misión</p>
+              <p class="text-xs text-mist/60 font-300 leading-relaxed">Ser un socio de confianza que impulse el crecimiento y la excelencia, desarrollando negocios y profesionales sostenibles en un entorno competitivo.</p>
+            </div>
+            <div class="border border-cyan/20 p-6 bg-navy-mid">
+              <p class="text-xs tracking-widest uppercase text-cyan mb-3 font-500">Visión</p>
+              <p class="text-xs text-mist/60 font-300 leading-relaxed">Ser una firma sostenible reconocida por nuestro compromiso con la calidad, la innovación constante y el impacto positivo en organizaciones y profesionales.</p>
+            </div>
+          </div>
+
+          <div class="mt-8 space-y-4 border-t border-white/10 pt-8">
+            <p class="text-xs tracking-widest uppercase text-mist/30 font-500">Objetivos estratégicos</p>
+            <div class="flex items-start gap-3"><span class="text-green flex-shrink-0">◆</span><p class="text-xs text-mist/55 font-300 leading-relaxed">Desarrollar soluciones personalizadas que respondan con precisión a cada modelo de negocio.</p></div>
+            <div class="flex items-start gap-3"><span class="text-green flex-shrink-0">◆</span><p class="text-xs text-mist/55 font-300 leading-relaxed">Fomentar la mejora continua usando metodologías que incrementen eficiencia y efectividad.</p></div>
+            <div class="flex items-start gap-3"><span class="text-green flex-shrink-0">◆</span><p class="text-xs text-mist/55 font-300 leading-relaxed">Construir relaciones sólidas con comunicación clara, asegurando relaciones a largo plazo.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-20 pt-12 border-t border-stone">
+        <p class="text-xs tracking-[0.2em] uppercase text-slate mb-6">Mercados que atendemos</p>
+        <div id="markets-real" class="flex flex-wrap gap-3"></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════
        EQUIPO
-  ════════════════════════════════════════════ -->
+  ═════════════════════════════════════════════ -->
+
+  <!-- Equipo Individual
   <section id="equipo" class="py-28 lg:py-40 bg-white">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
-
       <div class="section-header mb-16">
-        <p class="section-tag text-xs tracking-[0.25em] uppercase text-gold font-500 mb-4">El equipo</p>
-        <h2 class="font-display text-5xl lg:text-6xl font-700 leading-tight">
-          Expertos con<br /><em class="not-italic text-gold">credenciales reales.</em>
+        <p class="section-tag text-xs tracking-[0.25em] uppercase text-green font-500 mb-4">Nuestro equipo</p>
+        <h2 class="font-display text-5xl lg:text-6xl font-700 leading-tight text-navy">
+          Profesionales con<br /><em class="not-italic text-green">experiencia probada.</em>
         </h2>
       </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-
-        <!-- Team Member 1 -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl">
         <div class="team-card group">
-          <div class="team-avatar bg-obsidian aspect-square mb-6 relative overflow-hidden flex items-end">
-            <div class="avatar-initials absolute inset-0 flex items-center justify-center">
-              <span class="font-display text-6xl font-700 text-ivory/20">MM</span>
+          <div class="bg-navy aspect-[4/3] mb-6 relative overflow-hidden flex items-end">
+            <div class="absolute inset-0 flex items-center justify-center"><span class="font-display text-8xl font-700 text-white/10">MG</span></div>
+            <div class="absolute inset-0 opacity-20">
+              <svg class="absolute inset-0 w-full h-full" viewBox="0 0 300 220" fill="none">
+                <ellipse cx="150" cy="110" rx="100" ry="60" stroke="#5bb82e" stroke-width="1.5" transform="rotate(-20 150 110)"/>
+                <ellipse cx="150" cy="110" rx="80" ry="40" stroke="#29b6f6" stroke-width="1" transform="rotate(30 150 110)"/>
+                <circle cx="230" cy="80" r="4" fill="#5bb82e"/><circle cx="70" cy="140" r="3" fill="#29b6f6"/>
+              </svg>
             </div>
-            <div class="team-card-overlay absolute inset-0 bg-gold opacity-0 group-hover:opacity-10 transition-all duration-500"></div>
-            <div class="relative z-10 p-6">
-              <p class="font-display text-xl font-700 text-ivory">Manuel Maya</p>
-              <p class="text-xs tracking-widest uppercase text-gold">CEO &amp; Fundador</p>
+            <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-navy to-transparent"></div>
+            <div class="relative z-10 p-8">
+              <p class="font-display text-2xl font-700 text-white">Manuel García</p>
+              <p class="text-xs tracking-widest uppercase text-green mt-1">Gerente General &amp; Fundador</p>
             </div>
           </div>
-          <div class="team-bio">
-            <p class="text-sm text-slate font-300 leading-relaxed mb-5">
-              Ex-Director de Operaciones en firma de servicios de Auditoria. Certificado en Lean Six Sigma Black Belt y Automation Anywhere. Más de 60 procesos auditados en los últimos 4 años.
-            </p>
-            <div class="flex flex-wrap gap-2">
-              <span class="credential-tag text-xs tracking-widest uppercase px-3 py-1 border border-stone text-slate">Lean Six Sigma</span>
-              <span class="credential-tag text-xs tracking-widest uppercase px-3 py-1 border border-stone text-slate">RPA Certified</span>
-              <span class="credential-tag text-xs tracking-widest uppercase px-3 py-1 border border-stone text-slate">MBA</span>
-            </div>
+          <p class="text-sm text-slate font-300 leading-relaxed mb-5">Ingeniero con más de <strong class="font-500 text-navy">8 años de experiencia</strong> como auditor líder e implementador de Sistemas Integrados de Gestión, ESG, modelos de negocio, mejora continua, estandarización y seguridad ocupacional. Ha dirigido proyectos de consultoría y auditoría de alcance nacional e internacional con firmas Big4.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="credential-tag text-xs tracking-widest uppercase px-3 py-1 border border-stone text-slate">Auditor Líder ISO</span>
+            <span class="credential-tag text-xs tracking-widest uppercase px-3 py-1 border border-stone text-slate">ESG</span>
+            <span class="credential-tag text-xs tracking-widest uppercase px-3 py-1 border border-stone text-slate">Big4 Experience</span>
+            <span class="credential-tag text-xs tracking-widest uppercase px-3 py-1 border border-stone text-slate">SGI</span>
           </div>
         </div>
-
-        <!-- Team Member 2 -->
         <div class="team-card group">
-          <div class="team-avatar bg-stone aspect-square mb-6 relative overflow-hidden flex items-end">
-            <div class="avatar-initials absolute inset-0 flex items-center justify-center">
-              <span class="font-display text-6xl font-700 text-obsidian/10">AR</span>
+          <div class="bg-navy-mid aspect-[4/3] mb-6 relative overflow-hidden flex items-end">
+            <div class="absolute inset-0 flex items-center justify-center"><span class="font-display text-8xl font-700 text-white/10">AR</span></div>
+            <div class="absolute inset-0 opacity-20">
+              <svg class="absolute inset-0 w-full h-full" viewBox="0 0 300 220" fill="none">
+                <ellipse cx="150" cy="110" rx="100" ry="55" stroke="#29b6f6" stroke-width="1.5" transform="rotate(15 150 110)"/>
+                <ellipse cx="150" cy="110" rx="75" ry="40" stroke="#5bb82e" stroke-width="1" transform="rotate(-25 150 110)"/>
+                <circle cx="240" cy="100" r="4" fill="#29b6f6"/><circle cx="60" cy="120" r="3" fill="#5bb82e"/>
+              </svg>
             </div>
-            <div class="team-card-overlay absolute inset-0 bg-gold opacity-0 group-hover:opacity-10 transition-all duration-500"></div>
-            <div class="relative z-10 p-6">
-              <p class="font-display text-xl font-700 text-obsidian">Amara Romero</p>
-              <p class="text-xs tracking-widest uppercase text-gold">Directora Técnica</p>
+            <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-navy-mid to-transparent"></div>
+            <div class="relative z-10 p-8">
+              <p class="font-display text-2xl font-700 text-white">Amara Romero</p>
+              <p class="text-xs tracking-widest uppercase text-cyan mt-1">Consultora Senior</p>
             </div>
           </div>
-          <div class="team-bio">
-            <p class="text-sm text-slate font-300 leading-relaxed mb-5">
-              Ingeniera en Biotecnología con especialidad. Make Expert, certified n8n developer y ex-tech lead en startup de logística con 3M de transacciones mensuales.
-            </p>
-            <div class="flex flex-wrap gap-2">
-              <span class="credential-tag text-xs tracking-widest uppercase px-3 py-1 border border-stone text-slate">Make Expert</span>
-              <span class="credential-tag text-xs tracking-widest uppercase px-3 py-1 border border-stone text-slate">n8n Dev</span>
-              <span class="credential-tag text-xs tracking-widest uppercase px-3 py-1 border border-stone text-slate">API Design</span>
-            </div>
+          <p class="text-sm text-slate font-300 leading-relaxed mb-5">Ingeniera con 3 años de experiencia en <strong class="font-500 text-navy">organización y desarrollo de proyectos científicos</strong> y Sistemas de Gestión Integrados. Especialista en redacción, búsqueda y revisión sistemática de información técnica y normativa.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="credential-tag text-xs tracking-widest uppercase px-3 py-1 border border-stone text-slate">SGI</span>
+            <span class="credential-tag text-xs tracking-widest uppercase px-3 py-1 border border-stone text-slate">Proyectos Científicos</span>
+            <span class="credential-tag text-xs tracking-widest uppercase px-3 py-1 border border-stone text-slate">Documentación ISO</span>
           </div>
         </div>
-
-        <!-- Team Member 3
-        <div class="team-card group">
-          <div class="team-avatar bg-obsidian aspect-square mb-6 relative overflow-hidden flex items-end" style="background-color: #1a1a1a;">
-            <div class="avatar-initials absolute inset-0 flex items-center justify-center">
-              <span class="font-display text-6xl font-700 text-ivory/20">CF</span>
-            </div>
-            <div class="team-card-overlay absolute inset-0 bg-gold opacity-0 group-hover:opacity-10 transition-all duration-500"></div>
-            <div class="relative z-10 p-6">
-              <p class="font-display text-xl font-700 text-ivory">Carlos Fuentes</p>
-              <p class="text-xs tracking-widest uppercase text-gold">Estratega de Procesos</p>
-            </div>
-          </div>
-          <div class="team-bio">
-            <p class="text-sm text-slate font-300 leading-relaxed mb-5">
-              Consultor con 8 años en transformación digital para PYMES y corporativos. Especialista en mapeo de procesos BPMN, análisis de datos con Power BI y gestión del cambio organizacional.
-            </p>
-            <div class="flex flex-wrap gap-2">
-              <span class="credential-tag text-xs tracking-widest uppercase px-3 py-1 border border-stone text-slate">BPMN Cert.</span>
-              <span class="credential-tag text-xs tracking-widest uppercase px-3 py-1 border border-stone text-slate">Power BI</span>
-              <span class="credential-tag text-xs tracking-widest uppercase px-3 py-1 border border-stone text-slate">Change Mgmt</span>
-            </div>
-          </div>
-        </div>
-        -->
-
       </div>
-
-      <!-- TODO: Future LMS — Perfiles de Equipo llevan a Perfiles de Instructores en la Academia -->
-      <!-- Social community links -->
       <div class="mt-16 pt-10 border-t border-stone flex flex-col sm:flex-row items-center justify-between gap-6">
-        <p class="text-sm text-slate font-300">Sigue nuestra comunidad y contenido de auditoría:</p>
+        <p class="text-sm text-slate font-300">Síguenos y conecta con nuestra comunidad profesional:</p>
         <div class="flex gap-6">
-          <!-- TODO: Replace # with real LinkedIn company page URL -->
-          <a href="#" class="community-link flex items-center gap-2 text-sm tracking-widest uppercase hover:text-gold transition-colors duration-300 group">
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-            </svg>
+          !-- TODO: Replace # with real LinkedIn URL --
+          <a href="#" class="community-link flex items-center gap-2 text-sm tracking-widest uppercase hover:text-green transition-colors duration-300">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
             LinkedIn
           </a>
-          <!-- TODO: Replace # with real Facebook community group URL -->
-          <a href="#" class="community-link flex items-center gap-2 text-sm tracking-widest uppercase hover:text-gold transition-colors duration-300 group">
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-            </svg>
+          !-- TODO: Replace # with real Facebook URL --
+          <a href="#" class="community-link flex items-center gap-2 text-sm tracking-widest uppercase hover:text-cyan transition-colors duration-300">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
             Facebook
           </a>
         </div>
       </div>
     </div>
   </section>
+  -->
 
 
-  <!-- ═══════════════════════════════════════════
-       METODOLOGÍA — 3 PASOS
-  ════════════════════════════════════════════ -->
-  <section id="metodologia" class="py-28 lg:py-40 bg-obsidian overflow-hidden">
+  <!-- ══════════════════════════════════════════
+       METODOLOGÍA — 8 PASOS REALES
+  ═════════════════════════════════════════════ -->
+  <section id="metodologia" class="py-28 lg:py-40 bg-navy-deep overflow-hidden">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
 
-      <div class="section-header mb-20">
-        <p class="section-tag text-xs tracking-[0.25em] uppercase text-gold font-500 mb-4">Cómo trabajamos</p>
-        <h2 class="font-display text-5xl lg:text-6xl font-700 leading-tight text-ivory">
-          Nuestro proceso<br /><em class="not-italic text-gold">en tres etapas.</em>
-        </h2>
-      </div>
-
-      <!-- Process Steps — Full Width Visual -->
-      <div class="process-container relative">
-
-        <!-- Connecting line (desktop) -->
-        <div class="process-line hidden lg:block absolute top-[4.5rem] left-[calc(16.66%+2rem)] right-[calc(16.66%+2rem)] h-px bg-gold/30 z-0"></div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-8 relative z-10">
-
-          <!-- Step 1 -->
-          <div class="process-step group">
-            <div class="process-num-wrap flex items-center gap-4 mb-8">
-              <div class="process-circle w-16 h-16 border border-gold flex items-center justify-center group-hover:bg-gold transition-all duration-500">
-                <span class="font-display text-2xl font-700 text-gold group-hover:text-obsidian transition-colors duration-500">01</span>
-              </div>
-              <div class="process-line-h lg:hidden flex-1 h-px bg-gold/30"></div>
-            </div>
-            <h3 class="font-display text-3xl font-700 text-ivory mb-4">Diagnóstico <em class="not-italic text-gold">Profundo</em></h3>
-            <p class="text-sm text-stone/70 font-300 leading-relaxed mb-6">
-              En 5 días hábiles, mapeamos todos tus procesos críticos usando entrevistas estructuradas y observación directa. Entregamos un mapa de procesos con prioridades de automatización ordenadas por impacto y viabilidad.
-            </p>
-            <ul class="space-y-3">
-              <li class="flex items-start gap-3 text-xs text-stone/60 tracking-wide">
-                <span class="text-gold mt-0.5 flex-shrink-0">◆</span>
-                Mapeo BPMN de procesos actuales
-              </li>
-              <li class="flex items-start gap-3 text-xs text-stone/60 tracking-wide">
-                <span class="text-gold mt-0.5 flex-shrink-0">◆</span>
-                Identificación de cuellos de botella
-              </li>
-              <li class="flex items-start gap-3 text-xs text-stone/60 tracking-wide">
-                <span class="text-gold mt-0.5 flex-shrink-0">◆</span>
-                Reporte de oportunidades con ROI estimado
-              </li>
-            </ul>
-          </div>
-
-          <!-- Step 2 -->
-          <div class="process-step group">
-            <div class="process-num-wrap flex items-center gap-4 mb-8">
-              <div class="process-circle w-16 h-16 border border-gold flex items-center justify-center bg-gold group-hover:bg-transparent transition-all duration-500">
-                <span class="font-display text-2xl font-700 text-obsidian group-hover:text-gold transition-colors duration-500">02</span>
-              </div>
-            </div>
-            <h3 class="font-display text-3xl font-700 text-ivory mb-4">Implementación <em class="not-italic text-gold">Estructurada</em></h3>
-            <p class="text-sm text-stone/70 font-300 leading-relaxed mb-6">
-              Diseñamos e implementamos las automatizaciones en sprints de 2 semanas. Cada entregable es probado, documentado y revisado contigo antes de ir a producción. Cero sorpresas.
-            </p>
-            <ul class="space-y-3">
-              <li class="flex items-start gap-3 text-xs text-stone/60 tracking-wide">
-                <span class="text-gold mt-0.5 flex-shrink-0">◆</span>
-                Sprints de diseño e integración
-              </li>
-              <li class="flex items-start gap-3 text-xs text-stone/60 tracking-wide">
-                <span class="text-gold mt-0.5 flex-shrink-0">◆</span>
-                Testing riguroso en ambiente de staging
-              </li>
-              <li class="flex items-start gap-3 text-xs text-stone/60 tracking-wide">
-                <span class="text-gold mt-0.5 flex-shrink-0">◆</span>
-                Documentación técnica y de usuario
-              </li>
-            </ul>
-          </div>
-
-          <!-- Step 3 -->
-          <div class="process-step group">
-            <div class="process-num-wrap flex items-center gap-4 mb-8">
-              <div class="process-circle w-16 h-16 border border-gold flex items-center justify-center group-hover:bg-gold transition-all duration-500">
-                <span class="font-display text-2xl font-700 text-gold group-hover:text-obsidian transition-colors duration-500">03</span>
-              </div>
-            </div>
-            <h3 class="font-display text-3xl font-700 text-ivory mb-4">Escala <em class="not-italic text-gold">&amp; Transferencia</em></h3>
-            <p class="text-sm text-stone/70 font-300 leading-relaxed mb-6">
-              Una vez en producción, capacitamos a tu equipo, establecemos métricas de monitoreo y diseñamos el roadmap para las siguientes automatizaciones. Tu empresa queda lista para escalar sola.
-            </p>
-            <ul class="space-y-3">
-              <li class="flex items-start gap-3 text-xs text-stone/60 tracking-wide">
-                <span class="text-gold mt-0.5 flex-shrink-0">◆</span>
-                Capacitación práctica del equipo
-              </li>
-              <li class="flex items-start gap-3 text-xs text-stone/60 tracking-wide">
-                <span class="text-gold mt-0.5 flex-shrink-0">◆</span>
-                Dashboard de KPIs operativos
-              </li>
-              <li class="flex items-start gap-3 text-xs text-stone/60 tracking-wide">
-                <span class="text-gold mt-0.5 flex-shrink-0">◆</span>
-                Acceso a academia y comunidad
-              </li>
-            </ul>
-          </div>
-
-        </div>
-
-        <!-- Bottom CTA -->
-        <div class="mt-20 pt-12 border-t border-gold/20 flex flex-col sm:flex-row items-center justify-between gap-6">
-          <p class="font-display text-2xl text-ivory">¿Listo para iniciar<br/>tu diagnóstico gratuito?</p>
-          <a href="#contacto" class="inline-flex items-center gap-3 px-10 py-4 bg-gold text-obsidian text-sm tracking-widest uppercase font-500 hover:bg-gold-light transition-all duration-400 group flex-shrink-0">
-            Comenzar Ahora
-            <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-            </svg>
-          </a>
+      <div class="section-header mb-20 reveal">
+        <p class="section-tag-light text-xs tracking-[0.25em] uppercase text-green font-500 mb-4">Cómo implementamos</p>
+        <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+          <h2 class="font-display text-5xl lg:text-6xl font-700 leading-tight text-cream max-w-xl">
+            Un proceso<br /><em class="not-italic text-green">probado</em><br />en 8 etapas.
+          </h2>
+          <p class="text-sm text-mist/40 font-300 leading-relaxed max-w-xs">
+            Desde el diagnóstico hasta el soporte post-certificación. Ninguna etapa se salta, ningún detalle se ignora.
+          </p>
         </div>
       </div>
 
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-white/5">
+
+        <div class="process-step-card group p-8 bg-navy-deep hover:bg-navy-mid transition-all duration-400 reveal">
+          <div class="step-header mb-6">
+            <div class="step-num w-10 h-10 border border-green/40 flex items-center justify-center group-hover:bg-green group-hover:border-green transition-all duration-400">
+              <span class="font-display text-sm font-700 text-green group-hover:text-navy transition-colors duration-400">01</span>
+            </div>
+          </div>
+          <h4 class="font-display text-xl font-700 text-cream mb-3">Diagnóstico Inicial</h4>
+          <p class="text-xs text-mist/45 font-300 leading-relaxed">Levantamiento de información y análisis exhaustivo del estado actual de tu organización.</p>
+        </div>
+
+        <div class="process-step-card group p-8 bg-navy-deep hover:bg-navy-mid transition-all duration-400 reveal">
+          <div class="step-header mb-6">
+            <div class="step-num w-10 h-10 border border-green/40 flex items-center justify-center group-hover:bg-green group-hover:border-green transition-all duration-400">
+              <span class="font-display text-sm font-700 text-green group-hover:text-navy transition-colors duration-400">02</span>
+            </div>
+          </div>
+          <h4 class="font-display text-xl font-700 text-cream mb-3">Metas SMART &amp; Planificación</h4>
+          <p class="text-xs text-mist/45 font-300 leading-relaxed">Definición de objetivos medibles y planificación detallada del proyecto con cronograma claro.</p>
+        </div>
+
+        <div class="process-step-card group p-8 bg-navy-deep hover:bg-navy-mid transition-all duration-400 reveal">
+          <div class="step-header mb-6">
+            <div class="step-num w-10 h-10 border border-green/40 flex items-center justify-center group-hover:bg-green group-hover:border-green transition-all duration-400">
+              <span class="font-display text-sm font-700 text-green group-hover:text-navy transition-colors duration-400">03</span>
+            </div>
+          </div>
+          <h4 class="font-display text-xl font-700 text-cream mb-3">Diseño Documental</h4>
+          <p class="text-xs text-mist/45 font-300 leading-relaxed">Diseño y desarrollo de documentación conforme a las normas de referencia aplicables.</p>
+        </div>
+
+        <div class="process-step-card group p-8 bg-navy-deep hover:bg-navy-mid transition-all duration-400 reveal">
+          <div class="step-header mb-6">
+            <div class="step-num w-10 h-10 border border-cyan/40 flex items-center justify-center group-hover:bg-cyan group-hover:border-cyan transition-all duration-400">
+              <span class="font-display text-sm font-700 text-cyan group-hover:text-navy transition-colors duration-400">04</span>
+            </div>
+          </div>
+          <h4 class="font-display text-xl font-700 text-cream mb-3">Capacitación Interna</h4>
+          <p class="text-xs text-mist/45 font-300 leading-relaxed">Formación en interpretación de normas, SGI, acción correctiva y mejora continua para tu equipo.</p>
+        </div>
+
+        <div class="process-step-card group p-8 bg-navy-deep hover:bg-navy-mid transition-all duration-400 reveal">
+          <div class="step-header mb-6">
+            <div class="step-num w-10 h-10 border border-cyan/40 flex items-center justify-center group-hover:bg-cyan group-hover:border-cyan transition-all duration-400">
+              <span class="font-display text-sm font-700 text-cyan group-hover:text-navy transition-colors duration-400">05</span>
+            </div>
+          </div>
+          <h4 class="font-display text-xl font-700 text-cream mb-3">Seguimiento Mensual</h4>
+          <p class="text-xs text-mist/45 font-300 leading-relaxed">Monitoreo continuo con informes y reportes periódicos de avance en cada etapa del proyecto.</p>
+        </div>
+
+        <div class="process-step-card group p-8 bg-navy-deep hover:bg-navy-mid transition-all duration-400 reveal">
+          <div class="step-header mb-6">
+            <div class="step-num w-10 h-10 border border-cyan/40 flex items-center justify-center group-hover:bg-cyan group-hover:border-cyan transition-all duration-400">
+              <span class="font-display text-sm font-700 text-cyan group-hover:text-navy transition-colors duration-400">06</span>
+            </div>
+          </div>
+          <h4 class="font-display text-xl font-700 text-cream mb-3">Auditoría Interna</h4>
+          <p class="text-xs text-mist/45 font-300 leading-relaxed">Auditoría interna de primera parte y tratamiento riguroso de no conformidades detectadas.</p>
+        </div>
+
+        <div class="process-step-card group p-8 bg-navy-deep hover:bg-navy-mid transition-all duration-400 reveal">
+          <div class="step-header mb-6">
+            <div class="step-num w-10 h-10 border border-green/40 flex items-center justify-center group-hover:bg-green group-hover:border-green transition-all duration-400">
+              <span class="font-display text-sm font-700 text-green group-hover:text-navy transition-colors duration-400">07</span>
+            </div>
+          </div>
+          <h4 class="font-display text-xl font-700 text-cream mb-3">Auditoría de Certificación</h4>
+          <p class="text-xs text-mist/45 font-300 leading-relaxed">Acompañamiento durante la auditoría de certificación con el organismo de tercera parte.</p>
+        </div>
+
+        <div class="process-step-card p-8 bg-green reveal">
+          <div class="step-header mb-6">
+            <div class="w-10 h-10 border border-navy/20 flex items-center justify-center">
+              <span class="font-display text-sm font-700 text-navy">08</span>
+            </div>
+          </div>
+          <h4 class="font-display text-xl font-700 text-navy mb-3">Soporte Post-Implementación</h4>
+          <p class="text-xs text-navy/60 font-300 leading-relaxed">Acompañamiento continuo <strong class="font-600 text-navy">por un año completo</strong> después de la certificación. No te dejamos solo.</p>
+        </div>
+
+      </div>
+
+      <div class="mt-16 flex flex-col sm:flex-row items-center justify-between gap-6 pt-12 border-t border-white/10">
+        <p class="font-display text-2xl text-cream">¿Listo para certificar<br />tu Sistema de Gestión?</p>
+        <a href="#contacto" class="inline-flex items-center gap-3 px-10 py-4 bg-green text-navy text-xs tracking-widest uppercase font-600 hover:bg-green-light transition-all duration-400 group flex-shrink-0">
+          Solicitar Diagnóstico Inicial
+          <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
     </div>
   </section>
 
 
-  <!-- ═══════════════════════════════════════════
-       RESEÑAS / TESTIMONIOS
-  ════════════════════════════════════════════ -->
-  <section id="resenas" class="py-28 lg:py-40 bg-ivory">
+  <!-- ══════════════════════════════════════════
+       RESEÑAS
+  ═════════════════════════════════════════════ 
+  <section id="resenas" class="py-28 lg:py-40 bg-cream">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
 
-      <div class="section-header mb-16">
-        <p class="section-tag text-xs tracking-[0.25em] uppercase text-gold font-500 mb-4">Clientes &amp; Experiencias</p>
+      <div class="section-header mb-16 reveal">
+        <p class="section-tag text-xs tracking-[0.25em] uppercase text-green font-500 mb-4">Clientes &amp; Experiencias</p>
         <h2 class="font-display text-5xl lg:text-6xl font-700 leading-tight">
-          Lo que dicen<br /><em class="not-italic text-gold">quienes ya operan mejor.</em>
+          Organizaciones que<br /><em class="not-italic text-green">ya operan mejor.</em>
         </h2>
       </div>
 
-      <!-- Testimonials Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-stone">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-pearl">
 
-        <!-- Testimonial 1 - Large -->
-        <div class="testimonial-card bg-white p-10 md:col-span-2 flex flex-col justify-between">
+        <div class="bg-cream p-10 md:col-span-2 flex flex-col justify-between reveal">
           <div>
-            <div class="quote-mark font-display text-8xl text-gold/20 leading-none mb-4">"</div>
-            <p class="font-display text-2xl lg:text-3xl font-400 text-obsidian leading-relaxed mb-8">
-              Summit-Sphere no solo automatizó nuestro proceso de onboarding — lo rediseñó desde cero. Lo que nos tomaba 3 días ahora toma 2 horas. Nuestro equipo de ventas duplicó su capacidad sin contratar a nadie más.
+            <div class="font-display text-8xl text-green/12 leading-none mb-2 select-none">"</div>
+            <p class="font-display text-2xl lg:text-3xl font-400 text-navy leading-relaxed mb-8">
+              La implementación del ISO 9001 transformó la manera en que entendemos nuestros propios procesos internos. Summit-Sphere nos acompañó en cada paso con rigor técnico y comunicación clara durante todo el proyecto.
             </p>
           </div>
-          <div class="flex items-center justify-between border-t border-stone pt-6">
+          <div class="flex items-center justify-between border-t border-pearl pt-6">
             <div class="flex items-center gap-4">
-              <div class="w-10 h-10 bg-obsidian flex items-center justify-center">
-                <span class="text-ivory font-display font-700 text-sm">LM</span>
-              </div>
+              <div class="w-10 h-10 bg-navy flex items-center justify-center"><span class="text-cream font-display font-700 text-sm">RL</span></div>
               <div>
-                <p class="font-500 text-sm">Laura Medina</p>
-                <p class="text-xs text-slate">COO — Grupo Nexos (México)</p>
+                <p class="font-500 text-sm">Roberto Leal</p>
+                <p class="text-xs text-slate">Director General — Laboratorio Clínico Integral</p>
               </div>
             </div>
-            <div class="flex gap-1">
-              <span class="text-gold text-sm">★★★★★</span>
-            </div>
+            <span class="text-green text-sm">★★★★★</span>
           </div>
         </div>
 
-        <!-- Testimonial 2 -->
-        <div class="testimonial-card bg-obsidian p-10 flex flex-col justify-between">
+        <div class="bg-navy p-10 flex flex-col justify-between reveal">
           <div>
-            <div class="quote-mark font-display text-6xl text-gold/30 leading-none mb-4">"</div>
-            <p class="font-display text-xl font-400 text-ivory leading-relaxed mb-8">
-              El diagnóstico inicial fue revelador. No sabíamos cuánto tiempo perdíamos en tareas que podían desaparecer completamente. ROI en menos de 60 días.
+            <div class="font-display text-6xl text-green/20 leading-none mb-4 select-none">"</div>
+            <p class="font-display text-xl font-400 text-cream leading-relaxed mb-8">
+              Certificamos ISO 45001 en tiempo récord. El nivel técnico del equipo de Summit-Sphere no lo habíamos encontrado en otros consultores. Altamente recomendable.
             </p>
           </div>
           <div class="border-t border-white/10 pt-6">
             <div class="flex items-center gap-3 mb-2">
-              <div class="w-8 h-8 bg-gold flex items-center justify-center">
-                <span class="text-obsidian font-display font-700 text-xs">RC</span>
-              </div>
+              <div class="w-8 h-8 bg-green flex items-center justify-center"><span class="text-navy font-display font-700 text-xs">PM</span></div>
               <div>
-                <p class="font-500 text-sm text-ivory">Ricardo Castillo</p>
-                <p class="text-xs text-stone/60">CEO — TechFlow Bolivia</p>
+                <p class="font-500 text-sm text-cream">Patricia Mendoza</p>
+                <p class="text-xs text-mist/40">Gerente HSE — Empresa Petroquímica</p>
               </div>
             </div>
-            <div class="flex gap-1">
-              <span class="text-gold text-xs">★★★★★</span>
-            </div>
+            <span class="text-green text-xs">★★★★★</span>
           </div>
         </div>
 
-        <!-- Testimonial 3 -->
-        <div class="testimonial-card bg-white p-10 flex flex-col justify-between">
+        <div class="bg-cream p-10 flex flex-col justify-between reveal">
           <div>
-            <div class="quote-mark font-display text-6xl text-gold/20 leading-none mb-4">"</div>
-            <p class="font-display text-xl font-400 text-obsidian leading-relaxed mb-8">
-              Lo que más valoré fue la transferencia de conocimiento. Mi equipo ahora mantiene y escala las automatizaciones sin depender de consultores externos. Eso es independencia real.
+            <div class="font-display text-6xl text-green/12 leading-none mb-4 select-none">"</div>
+            <p class="font-display text-xl font-400 text-navy leading-relaxed mb-8">
+              Implementamos ISO 13485 para dispositivos médicos. Su conocimiento sectorial fue clave para lograr la certificación sin observaciones mayores del organismo certificador.
             </p>
           </div>
-          <div class="border-t border-stone pt-6">
+          <div class="border-t border-pearl pt-6">
             <div class="flex items-center gap-3 mb-2">
-              <div class="w-8 h-8 bg-stone flex items-center justify-center">
-                <span class="text-obsidian font-display font-700 text-xs">AP</span>
-              </div>
+              <div class="w-8 h-8 bg-pearl flex items-center justify-center"><span class="text-navy font-display font-700 text-xs">CR</span></div>
               <div>
-                <p class="font-500 text-sm">Andrea Ponce</p>
-                <p class="text-xs text-slate">Directora de Ops — InmoCorp Chile</p>
+                <p class="font-500 text-sm">Carlos Ruíz</p>
+                <p class="text-xs text-slate">Dir. Regulatorio — Distribuidora Médica</p>
               </div>
             </div>
-            <div class="flex gap-1">
-              <span class="text-gold text-xs">★★★★★</span>
-            </div>
+            <span class="text-green text-xs">★★★★★</span>
           </div>
         </div>
 
-        <!-- Testimonial 4 -->
-        <div class="testimonial-card bg-mist p-10 flex flex-col justify-between">
+        <div class="bg-pearl p-10 flex flex-col justify-between reveal">
           <div>
-            <div class="quote-mark font-display text-6xl text-gold/20 leading-none mb-4">"</div>
-            <p class="font-display text-xl font-400 text-obsidian leading-relaxed mb-8">
-              Llevábamos años sabiendo que necesitábamos automatizar pero no sabíamos por dónde empezar. Summit-Sphere llegó, auditó y en dos semanas teníamos un plan claro con prioridades.
+            <div class="font-display text-6xl text-green/15 leading-none mb-4 select-none">"</div>
+            <p class="font-display text-xl font-400 text-navy leading-relaxed mb-8">
+              Las auditorías de segunda parte a nuestros proveedores elevaron el nivel de cumplimiento en nuestra cadena de suministro. El informe fue impecable y muy accionable.
             </p>
           </div>
-          <div class="border-t border-stone pt-6">
+          <div class="border-t border-mist pt-6">
             <div class="flex items-center gap-3 mb-2">
-              <div class="w-8 h-8 bg-obsidian flex items-center justify-center">
-                <span class="text-ivory font-display font-700 text-xs">JR</span>
-              </div>
+              <div class="w-8 h-8 bg-navy flex items-center justify-center"><span class="text-cream font-display font-700 text-xs">LV</span></div>
               <div>
-                <p class="font-500 text-sm">Jorge Romero</p>
-                <p class="text-xs text-slate">Fundador — MediStore Colombia</p>
+                <p class="font-500 text-sm">Lucía Vargas</p>
+                <p class="text-xs text-slate">Jefa de Compras — Agencia Aduanal</p>
               </div>
             </div>
-            <div class="flex gap-1">
-              <span class="text-gold text-xs">★★★★★</span>
-            </div>
+            <span class="text-green text-xs">★★★★★</span>
           </div>
         </div>
 
-        <!-- CTA Testimonial -->
-        <div class="testimonial-card bg-gold p-10 flex flex-col justify-between">
+        <div class="bg-green p-10 flex flex-col justify-between reveal">
           <div>
-            <p class="font-display text-3xl font-700 text-obsidian leading-tight mb-6">Tu caso<br/>de éxito<br/>va aquí.</p>
-            <p class="text-sm text-obsidian/70 font-300 leading-relaxed">Únete a los negocios que ya operan de forma más inteligente.</p>
+            <p class="font-display text-3xl font-700 text-navy leading-tight mb-6">Tu organización<br/>puede ser<br/><em class="not-italic">la siguiente.</em></p>
+            <p class="text-sm text-navy/55 font-300 leading-relaxed">Únete a las organizaciones que ya operan con excelencia certificada y procesos sólidos.</p>
           </div>
-          <a href="#contacto" class="inline-flex items-center gap-2 text-sm tracking-widest uppercase text-obsidian border-b border-obsidian pb-1 hover:border-obsidian/50 transition-all duration-300 mt-8 group">
-            Empezar →
-          </a>
+          <a href="#contacto" class="inline-flex items-center gap-2 text-xs tracking-widest uppercase text-navy border-b border-navy/30 pb-1 mt-8 hover:border-navy transition-all duration-300 font-600">Contáctanos →</a>
         </div>
 
-      </div>
-
-      <!-- Logos / Trust bar -->
-      <div class="mt-16 pt-10 border-t border-stone">
-        <p class="text-xs tracking-[0.2em] uppercase text-slate mb-8 text-center">Empresas que confían en Summit-Sphere</p>
-        <div class="flex flex-wrap items-center justify-center gap-12 opacity-40">
-          <span class="font-display text-2xl font-700 text-slate">Grupo Nexos</span>
-          <span class="font-display text-2xl font-700 text-slate">TechFlow</span>
-          <span class="font-display text-2xl font-700 text-slate">InmoCorp</span>
-          <span class="font-display text-2xl font-700 text-slate">MediStore</span>
-          <span class="font-display text-2xl font-700 text-slate">Corpopatitos</span>
-        </div>
       </div>
     </div>
   </section>
+-->
 
 
-  <!-- ═══════════════════════════════════════════
+  <!-- ══════════════════════════════════════════
        CONTACTO
-  ════════════════════════════════════════════ -->
+  ═════════════════════════════════════════════ -->
   <section id="contacto" class="py-28 lg:py-40 bg-white">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
-
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
 
-        <!-- Left: Copy -->
-        <div>
-          <p class="section-tag text-xs tracking-[0.25em] uppercase text-gold font-500 mb-4">Contacto</p>
+        <div class="reveal-left">
+          <p class="section-tag text-xs tracking-[0.25em] uppercase text-green font-500 mb-4">Contacto</p>
           <h2 class="font-display text-5xl lg:text-6xl font-700 leading-tight mb-8">
-            Cuéntanos<br/><em class="not-italic text-gold">tu proceso.</em><br/>Nosotros lo<br/>simplificamos.
+            Cuéntanos<br /><em class="not-italic text-green">tu reto</em><br />de gestión.
           </h2>
-          <p class="text-base text-slate font-300 leading-relaxed mb-12 max-w-sm">
-            El primer diagnóstico es sin costo. En 30 minutos te decimos si hay oportunidades reales de automatización en tu empresa y cuál sería el impacto estimado.
+          <p class="text-sm text-slate font-300 leading-relaxed mb-12 max-w-sm">
+            El diagnóstico inicial es sin costo. En una primera reunión analizamos tu situación, identificamos qué normas aplican y te presentamos un plan de proyecto con tiempos y alcance reales.
           </p>
           <div class="space-y-6">
             <div class="flex items-center gap-4">
-              <div class="w-10 h-10 bg-obsidian flex items-center justify-center flex-shrink-0">
-                <svg class="w-4 h-4 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                </svg>
+              <div class="w-10 h-10 bg-navy flex items-center justify-center flex-shrink-0">
+                <svg class="w-4 h-4 text-green" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
               </div>
               <div>
                 <p class="text-xs tracking-widest uppercase text-slate mb-1">Email</p>
-                <!-- TODO: Replace with real contact email -->
-                <p class="font-500">contacto@summit-sphere.com</p>
+                <a href="mailto:manuel.garcia@summit-sphere.com" class="font-500 text-sm hover:text-green transition-colors duration-300">manuel.garcia@summit-sphere.com</a>
               </div>
             </div>
             <div class="flex items-center gap-4">
-              <div class="w-10 h-10 bg-obsidian flex items-center justify-center flex-shrink-0">
-                <svg class="w-4 h-4 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
-                </svg>
+              <div class="w-10 h-10 bg-navy flex items-center justify-center flex-shrink-0">
+                <svg class="w-4 h-4 text-green" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
               </div>
               <div>
-                <p class="text-xs tracking-widest uppercase text-slate mb-1">WhatsApp</p>
-                <!-- TODO: Replace with real WhatsApp number -->
-                <p class="font-500">+52 722 173 9808</p>
+                <p class="text-xs tracking-widest uppercase text-slate mb-1">Teléfono</p>
+                <a href="tel:7221739808" class="font-500 text-sm hover:text-green transition-colors duration-300">722 173 9808</a>
+              </div>
+            </div>
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 bg-navy flex items-center justify-center flex-shrink-0">
+                <svg class="w-4 h-4 text-green" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              </div>
+              <div>
+                <p class="text-xs tracking-widest uppercase text-slate mb-1">Ubicación</p>
+                <p class="font-500 text-sm">Metepec, Estado de México</p>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Right: Form -->
-        <!-- TODO: Connect form to backend API or form service (e.g. Formspree, custom endpoint) -->
-        <div class="contact-form-wrapper">
-          <form id="contact-form" class="space-y-0 border border-stone" novalidate>
-            <div class="grid grid-cols-1 sm:grid-cols-2 divide-y sm:divide-y-0 sm:divide-x divide-stone border-b border-stone">
+        <!-- Form -->
+        <!-- TODO: Connect to backend API endpoint, Formspree, or CRM (HubSpot/Pipedrive) -->
+        <div class="reveal-right">
+          <form id="contact-form" class="border border-pearl" novalidate>
+            <div class="grid grid-cols-1 sm:grid-cols-2 divide-y sm:divide-y-0 sm:divide-x divide-pearl border-b border-pearl">
               <div class="form-field p-6">
                 <label class="block text-xs tracking-widest uppercase text-slate mb-3">Nombre</label>
-                <input type="text" name="nombre" placeholder="Tu nombre completo" required
-                  class="w-full bg-transparent text-sm text-obsidian placeholder-stone focus:outline-none focus:placeholder-transparent transition-all duration-300 font-300" />
+                <input type="text" name="nombre" placeholder="Tu nombre completo" required class="w-full bg-transparent text-sm placeholder-mist focus:outline-none font-300"/>
               </div>
               <div class="form-field p-6">
                 <label class="block text-xs tracking-widest uppercase text-slate mb-3">Empresa</label>
-                <input type="text" name="empresa" placeholder="Nombre de tu empresa"
-                  class="w-full bg-transparent text-sm text-obsidian placeholder-stone focus:outline-none focus:placeholder-transparent transition-all duration-300 font-300" />
+                <input type="text" name="empresa" placeholder="Razón social" class="w-full bg-transparent text-sm placeholder-mist focus:outline-none font-300"/>
               </div>
             </div>
-
-            <div class="form-field p-6 border-b border-stone">
+            <div class="form-field p-6 border-b border-pearl">
               <label class="block text-xs tracking-widest uppercase text-slate mb-3">Correo Electrónico</label>
-              <input type="email" name="email" placeholder="tu@empresa.com" required
-                class="w-full bg-transparent text-sm text-obsidian placeholder-stone focus:outline-none focus:placeholder-transparent transition-all duration-300 font-300" />
+              <input type="email" name="email" placeholder="tu@empresa.com" required class="w-full bg-transparent text-sm placeholder-mist focus:outline-none font-300"/>
             </div>
-
-            <div class="form-field p-6 border-b border-stone">
-              <label class="block text-xs tracking-widest uppercase text-slate mb-3">Tema a abordar</label>
-              <select name="tema" class="w-full bg-transparent text-sm text-obsidian focus:outline-none transition-all duration-300 font-300 cursor-pointer appearance-none">
-                <option value="" disabled selected>Selecciona un área</option>
-                <option value="auditoria">Auditoría de Procesos</option>
-                <option value="automatizacion">Diseño de Automatizaciones</option>
-                <option value="integracion">Integración de Sistemas</option>
-                <option value="capacitacion">Capacitación de Equipos</option>
-                <option value="optimizacion">Optimización Continua</option>
-                <option value="otro">Otro / No sé por dónde empezar</option>
+            <div class="form-field p-6 border-b border-pearl">
+              <label class="block text-xs tracking-widest uppercase text-slate mb-3">Servicio de Interés</label>
+              <select name="tema" class="w-full bg-transparent text-sm text-navy focus:outline-none cursor-pointer appearance-none font-300">
+                <option value="" disabled selected>Selecciona una opción</option>
+                <option>Implementación de Sistema de Gestión ISO</option>
+                <option>Auditorías (1ª, 2ª o 3ª parte)</option>
+                <option>Consultoría Especializada</option>
+                <option>Capacitación en Normas ISO</option>
+                <option>Diagnóstico Inicial (sin costo)</option>
+                <option>No sé por dónde empezar</option>
               </select>
             </div>
-
-            <div class="form-field p-6 border-b border-stone">
-              <label class="block text-xs tracking-widest uppercase text-slate mb-3">Cuéntanos más</label>
-              <textarea name="mensaje" rows="4" placeholder="Describe brevemente tu situación actual — ¿qué proceso te genera más fricción?"
-                class="w-full bg-transparent text-sm text-obsidian placeholder-stone focus:outline-none focus:placeholder-transparent transition-all duration-300 font-300 resize-none"></textarea>
+            <div class="form-field p-6 border-b border-pearl">
+              <label class="block text-xs tracking-widest uppercase text-slate mb-3">Cuéntanos tu situación</label>
+              <textarea name="mensaje" rows="4" placeholder="¿Qué norma te interesa implementar? ¿Cuál es el giro y tamaño de tu organización? ¿Tienes alguna fecha límite para certificar?" class="w-full bg-transparent text-sm placeholder-mist focus:outline-none font-300 resize-none"></textarea>
             </div>
-
             <div class="p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-              <p class="text-xs text-slate font-300">Respondemos en menos de 24 horas hábiles.</p>
-              <button type="submit" class="submit-btn inline-flex items-center gap-3 px-8 py-3.5 bg-obsidian text-ivory text-sm tracking-widest uppercase font-500 hover:bg-gold transition-all duration-400 group flex-shrink-0">
+              <p class="text-xs text-slate font-300">Respuesta en menos de 24 horas hábiles.</p>
+              <button type="submit" class="submit-btn inline-flex items-center gap-3 px-8 py-3.5 bg-navy text-cream text-xs tracking-widest uppercase font-500 hover:bg-green hover:text-navy transition-all duration-400 group flex-shrink-0">
                 <span id="submit-text">Enviar Consulta</span>
-                <svg id="submit-arrow" class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                </svg>
-                <svg id="submit-spinner" class="w-4 h-4 animate-spin hidden" fill="none" viewBox="0 0 24 24">
-                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                  <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 12 0 12 12H4z"></path>
-                </svg>
+                <svg id="submit-arrow" class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                <svg id="submit-spinner" class="w-4 h-4 animate-spin hidden" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 12 0 12 12H4z"/></svg>
               </button>
             </div>
           </form>
-
-          <!-- Success message -->
-          <div id="form-success" class="hidden mt-4 p-6 bg-obsidian">
-            <p class="font-display text-lg text-ivory">¡Mensaje recibido!</p>
-            <p class="text-sm text-stone/70 font-300 mt-2">Nos pondremos en contacto contigo dentro de las próximas 24 horas. Revisa tu bandeja de entrada.</p>
+          <div id="form-success" class="hidden mt-4 p-6 bg-navy">
+            <p class="font-display text-lg text-cream">¡Mensaje recibido!</p>
+            <p class="text-xs text-mist/50 font-300 mt-2">Manuel o Amara te contactarán en las próximas 24 horas hábiles.</p>
           </div>
         </div>
 
@@ -869,142 +838,122 @@
   </section>
 
 
-  <!-- ═══════════════════════════════════════════
+  <!-- ══════════════════════════════════════════
        FOOTER
-  ════════════════════════════════════════════ -->
-  <footer class="bg-obsidian pt-20 pb-8">
+  ═════════════════════════════════════════════ -->
+  <footer class="bg-navy-deep pt-20 pb-8">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
-
-      <!-- Footer top -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 pb-16 border-b border-white/10">
 
-        <!-- Brand -->
         <div class="lg:col-span-2">
           <div class="flex items-center gap-3 mb-6">
-            <svg width="32" height="32" viewBox="0 0 36 36" fill="none">
-              <polygon points="18,3 33,30 3,30" fill="none" stroke="#f7f5f0" stroke-width="2"/>
-              <polygon points="18,11 27,27 9,27" fill="#b8962e" opacity="0.85"/>
+            <svg viewBox="0 0 40 40" fill="none" class="w-8 h-8">
+              <circle cx="20" cy="20" r="18" stroke="#29abe2" stroke-width="1.2" opacity="0.6"/>
+              <ellipse cx="20" cy="20" rx="11" ry="18" stroke="#3dba4e" stroke-width="2" transform="rotate(-25 20 20)"/>
+              <ellipse cx="20" cy="20" rx="18" ry="8" stroke="#3dba4e" stroke-width="1.5" transform="rotate(-15 20 20)" opacity="0.5"/>
+              <circle cx="20" cy="20" r="3.5" fill="#3dba4e"/>
+              <circle cx="30" cy="16" r="2" fill="#3dba4e"/>
+              <circle cx="11" cy="25" r="1.5" fill="#29abe2"/>
             </svg>
-            <span class="font-display text-lg font-600 tracking-wider uppercase text-ivory">Summit<span class="text-gold">-</span>Sphere</span>
+            <span class="font-display text-lg font-700 text-cream">Summit<span class="text-green">-</span>Sphere</span>
           </div>
-          <p class="text-sm text-stone/60 font-300 leading-relaxed max-w-xs mb-8">
-            Consultoría y auditoría para empresas que quieren operar al siguiente nivel — sin fricciones, sin caos.
-          </p>
-          <p class="text-xs tracking-[0.2em] uppercase text-stone/40">We believe</p>
-          <p class="font-display text-base italic text-stone/60 mt-2 max-w-xs">
-            "La automatización bien ejecutada no reemplaza personas — las libera."
-          </p>
+          <p class="text-xs text-mist/40 font-300 leading-relaxed max-w-xs mb-6">Consultoría e implementación de Sistemas de Gestión ISO. Socio de confianza para la excelencia empresarial desde 2020. Metepec, Estado de México.</p>
+          <div class="space-y-2">
+            <p class="text-xs text-mist/30 font-300">manuel.garcia@summit-sphere.com</p>
+            <p class="text-xs text-mist/30 font-300">722 173 9808</p>
+            <p class="text-xs text-mist/30 font-300">Metepec, Estado de México</p>
+          </div>
         </div>
 
-        <!-- Links: Servicios -->
         <div>
-          <p class="text-xs tracking-widest uppercase text-stone/40 mb-6">Servicios</p>
+          <p class="text-xs tracking-widest uppercase text-mist/25 mb-6">Servicios</p>
           <ul class="space-y-3">
-            <li><a href="#servicios" class="footer-link text-sm text-stone/60 hover:text-gold transition-colors duration-300">Auditoría de Procesos</a></li>
-            <li><a href="#servicios" class="footer-link text-sm text-stone/60 hover:text-gold transition-colors duration-300">Automatizaciones</a></li>
-            <li><a href="#servicios" class="footer-link text-sm text-stone/60 hover:text-gold transition-colors duration-300">Integración de Sistemas</a></li>
-            <li><a href="#servicios" class="footer-link text-sm text-stone/60 hover:text-gold transition-colors duration-300">Capacitación</a></li>
-            <li><a href="#servicios" class="footer-link text-sm text-stone/60 hover:text-gold transition-colors duration-300">Optimización Continua</a></li>
+            <li><a href="#servicios" class="text-xs text-mist/45 hover:text-green transition-colors duration-300">Implementación ISO</a></li>
+            <li><a href="#servicios" class="text-xs text-mist/45 hover:text-green transition-colors duration-300">Auditorías</a></li>
+            <li><a href="#servicios" class="text-xs text-mist/45 hover:text-green transition-colors duration-300">Consultoría Especializada</a></li>
+            <li><a href="#servicios" class="text-xs text-mist/45 hover:text-green transition-colors duration-300">Capacitación</a></li>
+            <li><a href="#metodologia" class="text-xs text-mist/45 hover:text-green transition-colors duration-300">Metodología</a></li>
           </ul>
         </div>
 
-        <!-- Links: Empresa -->
         <div>
-          <p class="text-xs tracking-widest uppercase text-stone/40 mb-6">Empresa</p>
+          <p class="text-xs tracking-widest uppercase text-mist/25 mb-6">Normas ISO</p>
           <ul class="space-y-3">
-            <li><a href="#nosotros" class="footer-link text-sm text-stone/60 hover:text-gold transition-colors duration-300">Quiénes somos</a></li>
-            <li><a href="#equipo" class="footer-link text-sm text-stone/60 hover:text-gold transition-colors duration-300">El equipo</a></li>
-            <li><a href="#metodologia" class="footer-link text-sm text-stone/60 hover:text-gold transition-colors duration-300">Metodología</a></li>
-            <li><a href="#resenas" class="footer-link text-sm text-stone/60 hover:text-gold transition-colors duration-300">Clientes</a></li>
-            <!-- TODO: Replace with real blog URL when available -->
-            <li><a href="#" class="footer-link text-sm text-stone/60 hover:text-gold transition-colors duration-300">Blog</a></li>
+            <li><a href="#servicios" class="text-xs text-mist/45 hover:text-green transition-colors duration-300">ISO 9001 · Calidad</a></li>
+            <li><a href="#servicios" class="text-xs text-mist/45 hover:text-green transition-colors duration-300">ISO 13485 · Médicos</a></li>
+            <li><a href="#servicios" class="text-xs text-mist/45 hover:text-green transition-colors duration-300">ISO 14001 · Ambiente</a></li>
+            <li><a href="#servicios" class="text-xs text-mist/45 hover:text-green transition-colors duration-300">ISO 45001 · Seguridad</a></li>
+            <li><a href="#servicios" class="text-xs text-mist/45 hover:text-green transition-colors duration-300">ISO 27001 · Información</a></li>
           </ul>
         </div>
 
-        <!-- Links: Recursos + Academia -->
         <div>
-          <p class="text-xs tracking-widest uppercase text-stone/40 mb-6">Recursos</p>
+          <p class="text-xs tracking-widest uppercase text-mist/25 mb-6">Empresa</p>
           <ul class="space-y-3">
-            <!-- TODO: Link to LMS subdomain when ready: academia.summit-sphere.com -->
-            <li>
-              <button class="footer-link text-sm text-stone/60 hover:text-gold transition-colors duration-300 text-left academia-footer-btn">
-                Academia ✦
-              </button>
-            </li>
-            <!-- TODO: Replace # with real Facebook community URL -->
-            <li><a href="#" class="footer-link text-sm text-stone/60 hover:text-gold transition-colors duration-300">Comunidad Facebook</a></li>
-            <!-- TODO: Replace # with real LinkedIn company URL -->
-            <li><a href="#" class="footer-link text-sm text-stone/60 hover:text-gold transition-colors duration-300">LinkedIn</a></li>
-            <li><a href="#contacto" class="footer-link text-sm text-stone/60 hover:text-gold transition-colors duration-300">Contacto</a></li>
+            <li><a href="#nosotros"    class="text-xs text-mist/45 hover:text-green transition-colors duration-300">Quiénes somos</a></li>
+            <li><a href="#equipo"      class="text-xs text-mist/45 hover:text-green transition-colors duration-300">El equipo</a></li>
+            <li><a href="#resenas"     class="text-xs text-mist/45 hover:text-green transition-colors duration-300">Clientes</a></li>
+            <!-- TODO: Connect to LMS when ready: academia.summit-sphere.com -->
+            <li><button class="text-xs text-green/60 hover:text-green transition-colors duration-300 academia-footer-btn text-left">Academia ✦</button></li>
+            <li><a href="#contacto"    class="text-xs text-mist/45 hover:text-green transition-colors duration-300">Contacto</a></li>
           </ul>
         </div>
       </div>
 
-      <!-- Footer bottom -->
       <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <p class="text-xs text-stone/30 font-300">© <span id="year"></span> Summit-Sphere. Todos los derechos reservados.</p>
-        <div class="flex gap-8">
+        <p class="text-xs text-mist/20 font-300">© <span id="year"></span> Summit-Sphere. Todos los derechos reservados. Metepec, Estado de México.</p>
+        <div class="flex gap-6">
           <!-- TODO: Replace # with real legal pages -->
-          <a href="#" class="text-xs text-stone/30 hover:text-stone/60 transition-colors duration-300 tracking-wider uppercase">Términos de Servicio</a>
-          <a href="#" class="text-xs text-stone/30 hover:text-stone/60 transition-colors duration-300 tracking-wider uppercase">Política de Privacidad</a>
+          <a href="#" class="text-xs text-mist/20 hover:text-mist/50 transition-colors duration-300 uppercase tracking-wider">Aviso de Privacidad</a>
+          <a href="#" class="text-xs text-mist/20 hover:text-mist/50 transition-colors duration-300 uppercase tracking-wider">Términos de Servicio</a>
         </div>
       </div>
-
     </div>
   </footer>
 
 
-  <!-- ═══════════════════════════════════════════
+  <!-- ══════════════════════════════════════════
        ACADEMIA MODAL (Próximamente)
-       TODO: Reemplazar con:
-       - Redireccionar a academia.summit-sphere.com, 
-       - Un bloque de autenticación al LMS backend
-       - Integrar catálogo de cursos
-  ════════════════════════════════════════════ -->
+       TODO: Replace with redirect to academia.summit-sphere.com
+       or integrate LMS auth when platform is ready
+  ═════════════════════════════════════════════ -->
   <div id="academia-modal" class="fixed inset-0 z-[100] flex items-center justify-center p-6 opacity-0 pointer-events-none transition-all duration-500">
-    <!-- Backdrop -->
-    <div id="modal-backdrop" class="absolute inset-0 bg-obsidian/80 backdrop-blur-sm" id="modal-close"></div>
-    <!-- Modal -->
-    <div id="modal-content" class="relative bg-ivory max-w-lg w-full p-12 translate-y-8 transition-all duration-500">
-      <!-- Close button -->
-      <button id="modal-close-btn" class="absolute top-6 right-6 w-8 h-8 flex items-center justify-center hover:bg-stone transition-colors duration-300" aria-label="Cerrar">
-        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/>
-        </svg>
+    <div id="modal-backdrop" class="absolute inset-0 bg-navy-deep/92 backdrop-blur-sm"></div>
+    <div id="modal-content" class="relative bg-cream max-w-lg w-full p-12 translate-y-8 transition-all duration-500">
+      <button id="modal-close-btn" class="absolute top-6 right-6 w-8 h-8 flex items-center justify-center hover:bg-pearl transition-colors duration-300">
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/></svg>
       </button>
-
-      <!-- Logo -->
-      <div class="flex items-center gap-3 mb-10">
-        <svg width="28" height="28" viewBox="0 0 36 36" fill="none">
-          <polygon points="18,3 33,30 3,30" fill="none" stroke="#0a0a0a" stroke-width="2"/>
-          <polygon points="18,11 27,27 9,27" fill="#b8962e" opacity="0.85"/>
+      <div class="flex items-center gap-3 mb-8">
+        <svg viewBox="0 0 40 40" fill="none" class="w-8 h-8">
+          <circle cx="20" cy="20" r="18" stroke="#29abe2" stroke-width="1.2" opacity="0.6"/>
+          <ellipse cx="20" cy="20" rx="11" ry="18" stroke="#3dba4e" stroke-width="2" transform="rotate(-25 20 20)"/>
+          <circle cx="20" cy="20" r="3.5" fill="#3dba4e"/>
         </svg>
-        <span class="font-display text-base font-700 tracking-wider uppercase">Summit<span class="text-gold">-</span>Sphere <em class="not-italic font-300 text-gold">Academia</em></span>
+        <span class="font-display text-lg font-700 text-navy">Summit<span class="text-green">-</span>Sphere <em class="not-italic font-300 text-green">Academia</em></span>
       </div>
-
-      <p class="text-xs tracking-[0.2em] uppercase text-gold font-500 mb-4">Próximamente</p>
-      <h3 class="font-display text-4xl font-700 mb-4 leading-tight">Una academia<br/><em class="not-italic text-gold">diseñada para<br/>operadores.</em></h3>
-      <p class="text-sm text-slate font-300 leading-relaxed mb-10">
-        Cursos prácticos de auditoria, gestión de procesos y herramientas No-Code para que tú y tu equipo escalen sin depender de consultores externos.
-      </p>
-
-      <!-- Early access form -->
-      <!-- TODO: Connect this to your LMS waitlist or CRM -->
-      <div class="space-y-0 border border-stone">
-        <div class="p-5 border-b border-stone">
-          <input type="email" id="academy-email" placeholder="tu@empresa.com"
-            class="w-full bg-transparent text-sm text-obsidian placeholder-stone focus:outline-none font-300" />
+      <p class="text-xs tracking-[0.2em] uppercase text-green font-500 mb-4">Próximamente</p>
+      <h3 class="font-display text-4xl font-700 mb-4 leading-tight text-navy">Formación en<br /><em class="not-italic text-green">Normas ISO<br />y Gestión.</em></h3>
+      <p class="text-sm text-slate font-300 leading-relaxed mb-10">Cursos prácticos de interpretación de normas ISO, auditoría interna, mejora continua y gestión documental para equipos de calidad y profesionales del sector.</p>
+      <!-- TODO: Connect to LMS waitlist API or CRM -->
+      <div class="border border-pearl">
+        <div class="p-5 border-b border-pearl">
+          <input type="email" id="academy-email" placeholder="tu@empresa.com" class="w-full bg-transparent text-sm placeholder-mist focus:outline-none font-300"/>
         </div>
-        <button id="academy-subscribe" class="w-full p-5 bg-obsidian text-ivory text-sm tracking-widest uppercase font-500 hover:bg-gold transition-all duration-400 text-center">
-          Quiero Acceso Anticipado
-        </button>
+        <button id="academy-subscribe" class="w-full p-5 bg-navy text-cream text-xs tracking-widest uppercase font-500 hover:bg-green hover:text-navy transition-all duration-400">Quiero Acceso Anticipado</button>
       </div>
-      <p class="text-xs text-slate font-300 mt-4 text-center">Te notificaremos cuando abramos. Sin spam.</p>
+      <p class="text-xs text-slate font-300 mt-4 text-center">Sin spam. Solo te avisamos cuando abramos.</p>
     </div>
   </div>
 
-
-  <!-- Script -->
+  <script>
+    const markets = ['Farmacéutico','Dispositivos Médicos','Construcción','Petroquímico','Logístico','Metalmecánica','Despachos Jurídicos','Hospitalario','Laboratorios Clínicos','Agencias Aduanales','Mantenimiento','Seguridad','Gubernamental'];
+    const marketsEl = document.getElementById('markets-real');
+    if (marketsEl) {
+      marketsEl.innerHTML = markets.map(m =>
+        `<span class="inline-block text-xs tracking-widest uppercase px-3 py-1.5 border border-stone text-slate hover:border-green hover:text-green transition-all duration-300 cursor-default">${m}</span>`
+      ).join('');
+    }
+  </script>
   <script src="script.js"></script>
 </body>
 </html>

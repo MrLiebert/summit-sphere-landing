@@ -13,24 +13,45 @@ const $ = (selector, context = document) => context.querySelector(selector);
 const $$ = (selector, context = document) => [...context.querySelectorAll(selector)];
 
 /* ================================================
-   1. NAVBAR — Scroll-aware sticky
+   1. NAVBAR — Section-aware three-state sticky
+   States:
+     (default) hero-nav  → transparent, white text  [hero]
+     scrolled            → opaque dark navy          [navy sections]
+     scrolled-light      → opaque light              [white/off-white sections]
    ================================================ */
 (function initNavbar() {
   const navbar = $('#navbar');
   if (!navbar) return;
 
-  let lastScrollY = 0;
+  // Sections considered "light" (white / off-white background)
+  const lightSectionIds = ['servicios', 'nosotros', 'equipo', 'resenas', 'contacto'];
 
   const updateNavbar = () => {
     const scrollY = window.scrollY;
 
-    if (scrollY > 60) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
+    if (scrollY <= 60) {
+      // At the very top — transparent over hero
+      navbar.classList.remove('scrolled', 'scrolled-light');
+      return;
     }
 
-    lastScrollY = scrollY;
+    // Determine which section's background is currently behind the navbar
+    let overLight = false;
+    lightSectionIds.forEach(id => {
+      const section = document.getElementById(id);
+      if (!section) return;
+      const { top, bottom } = section.getBoundingClientRect();
+      // Section is intersecting the navbar band (top 80px of viewport)
+      if (top <= 80 && bottom > 0) overLight = true;
+    });
+
+    if (overLight) {
+      navbar.classList.remove('scrolled');
+      navbar.classList.add('scrolled-light');
+    } else {
+      navbar.classList.remove('scrolled-light');
+      navbar.classList.add('scrolled');
+    }
   };
 
   window.addEventListener('scroll', updateNavbar, { passive: true });
@@ -149,8 +170,8 @@ const $$ = (selector, context = document) => [...context.querySelectorAll(select
 
       subscribeBtn.textContent = '¡Listo! Te avisamos pronto ✦';
       subscribeBtn.disabled = true;
-      subscribeBtn.style.background = 'var(--gold)';
-      subscribeBtn.style.color = 'var(--obsidian)';
+      subscribeBtn.style.background = 'var(--green)';
+      subscribeBtn.style.color = 'var(--navy)';
       emailInput.value = '';
     });
   }
@@ -324,9 +345,7 @@ const $$ = (selector, context = document) => [...context.querySelectorAll(select
       if (entry.isIntersecting) {
         const id = entry.target.getAttribute('id');
         navLinks.forEach(link => {
-          const href = link.getAttribute('href');
-          link.classList.toggle('text-gold', href === `#${id}`);
-          link.classList.toggle('text-slate', href !== `#${id}`);
+          link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
         });
       }
     });
