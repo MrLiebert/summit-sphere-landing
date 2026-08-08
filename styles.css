@@ -1,0 +1,668 @@
+/* ================================================
+   SUMMIT-SPHERE — styles.css
+   Brand palette: Navy · Green · Cyan
+   ================================================ */
+
+/* ── Variables ── */
+:root {
+  --navy:         #0d1f35;
+  --navy-deep:    #081528;
+  --navy-mid:     #132b48;
+  --cream:        #f5f8fc;
+  --pearl:        #e8eef5;
+  --stone:        #e2eaf3;
+  --green:        #3dba4e;
+  --green-light:  #5ed46e;
+  --green-dark:   #2d9a3c;
+  --cyan:         #29abe2;
+  --cyan-light:   #4dc3f5;
+  --slate:        #4a6080;
+  --mist:         #dce8f0;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-base: 400ms var(--ease-out-expo);
+  --transition-slow: 700ms var(--ease-out-expo);
+}
+
+/* ── Base ── */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--navy-deep); }
+::-webkit-scrollbar-thumb { background: var(--green); border-radius: 2px; }
+
+/* ── Selection ── */
+::selection {
+  background: var(--green);
+  color: var(--navy);
+}
+
+/* ================================================
+   NAVIGATION
+   ================================================ */
+
+/* Default (over hero) — transparent, light text */
+#navbar .nav-brand-text { color: #ffffff; }
+#navbar .nav-link       { color: rgba(255, 255, 255, 0.7); }
+#navbar .nav-link:hover { color: var(--green); }
+#navbar .hamburger-line { background-color: #ffffff; }
+
+/* Scrolled state — opaque navy */
+#navbar.scrolled {
+  background: rgba(8, 21, 40, 0.97);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+#navbar.scrolled .nav-brand-text { color: #ffffff; }
+#navbar.scrolled .nav-link       { color: rgba(255, 255, 255, 0.6); }
+#navbar.scrolled .nav-link:hover { color: var(--green); }
+#navbar.scrolled .hamburger-line { background-color: rgba(255, 255, 255, 0.8); }
+
+/* On light sections — solid light bg */
+#navbar.scrolled-light {
+  background: rgba(245, 248, 252, 0.97);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--stone);
+}
+
+#navbar.scrolled-light .nav-brand-text { color: var(--navy); }
+#navbar.scrolled-light .nav-link       { color: var(--slate); }
+#navbar.scrolled-light .nav-link:hover { color: var(--green-dark); }
+#navbar.scrolled-light .hamburger-line { background-color: var(--navy); }
+#navbar.scrolled-light .nav-link.active { color: var(--green-dark) !important; }
+
+/* Nav link underline effect */
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 300ms ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--green);
+  transition: width 300ms ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after { width: 100%; }
+
+.nav-link.active { color: var(--green) !important; }
+
+/* Academia button — keeps its solid green treatment on every state */
+.academy-btn { white-space: nowrap; }
+
+/* Mobile menu — always dark */
+.mobile-menu {
+  background: var(--navy);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.mobile-menu.open {
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.mobile-nav-link {
+  display: block;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  font-family: 'DM Sans', sans-serif;
+  padding: 0.25rem 0;
+  border-bottom: 1px solid transparent;
+  transition: color 300ms ease, border-color 300ms ease;
+}
+
+.mobile-nav-link:hover {
+  color: var(--green);
+  border-bottom-color: var(--green);
+}
+
+/* Hamburger animation */
+.hamburger-line:last-child { width: 1rem; }
+#menu-toggle:hover .hamburger-line:last-child { width: 1.5rem; }
+
+.menu-open .hamburger-line:nth-child(1) { transform: translateY(5px) rotate(45deg); }
+.menu-open .hamburger-line:nth-child(2) { opacity: 0; }
+.menu-open .hamburger-line:nth-child(3) { width: 1.5rem; transform: translateY(-7px) rotate(-45deg); }
+
+/* ================================================
+   HERO — Dark Navy
+   ================================================ */
+
+/* Orbital background glow blobs */
+.hero-orb { border-radius: 50%; }
+
+.hero-orb-1 {
+  top: -10%;
+  right: -10%;
+  width: 50vw;
+  height: 50vw;
+  max-width: 700px;
+  max-height: 700px;
+  background: radial-gradient(ellipse at center,
+    rgba(61, 186, 78, 0.14) 0%,
+    rgba(41, 171, 226, 0.06) 40%,
+    transparent 70%
+  );
+  filter: blur(40px);
+}
+
+.hero-orb-2 {
+  bottom: -15%;
+  left: -12%;
+  width: 40vw;
+  height: 40vw;
+  max-width: 500px;
+  max-height: 500px;
+  background: radial-gradient(ellipse at center,
+    rgba(41, 171, 226, 0.10) 0%,
+    rgba(61, 186, 78, 0.04) 40%,
+    transparent 70%
+  );
+  filter: blur(60px);
+}
+
+/* Subtle dot grid */
+.hero-grid {
+  background-image: radial-gradient(rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: center center;
+}
+
+/* Hero text entrance animations */
+.hero-tag         { animation: fadeUp 0.7s var(--ease-out-expo) 0.20s forwards; }
+.hero-headline    { animation: fadeUp 0.9s var(--ease-out-expo) 0.35s forwards; }
+.hero-sub         { animation: fadeUp 0.9s var(--ease-out-expo) 0.55s forwards; }
+.hero-cta         { animation: fadeUp 0.9s var(--ease-out-expo) 0.72s forwards; }
+.hero-sphere-wrap { animation: fadeIn  1.4s var(--ease-out-expo) 0.60s forwards; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.hero-contact { text-decoration: none; }
+
+/* ── Orbital sphere visual ─────────────────────── */
+.sphere-ring {
+  border-radius: 50%;
+  border: 1px solid rgba(61, 186, 78, 0.28);
+}
+
+.sphere-ring-1 { animation: ringSpinA 26s linear infinite; }
+.sphere-ring-2 {
+  border-color: rgba(41, 171, 226, 0.30);
+  animation: ringSpinB 19s linear infinite;
+}
+.sphere-ring-3 {
+  border-color: rgba(61, 186, 78, 0.18);
+  animation: ringSpinC 32s linear infinite reverse;
+}
+
+@keyframes ringSpinA {
+  from { transform: rotate(0deg)   scaleY(0.40); }
+  to   { transform: rotate(360deg) scaleY(0.40); }
+}
+@keyframes ringSpinB {
+  from { transform: rotate(60deg)  scaleY(0.62); }
+  to   { transform: rotate(420deg) scaleY(0.62); }
+}
+@keyframes ringSpinC {
+  from { transform: rotate(0deg)   scaleX(0.48); }
+  to   { transform: rotate(360deg) scaleX(0.48); }
+}
+
+.sphere-center {
+  position: relative;
+  background: radial-gradient(circle at 35% 30%,
+    rgba(94, 212, 110, 0.55) 0%,
+    rgba(61, 186, 78, 0.22) 45%,
+    rgba(61, 186, 78, 0.04) 100%
+  );
+  box-shadow: 0 0 60px rgba(61, 186, 78, 0.28);
+  animation: spherePulse 5s ease-in-out infinite;
+}
+
+.sphere-inner {
+  border: 1px solid rgba(61, 186, 78, 0.45);
+}
+
+@keyframes spherePulse {
+  0%, 100% { transform: scale(1);    box-shadow: 0 0 50px rgba(61, 186, 78, 0.22); }
+  50%      { transform: scale(1.06); box-shadow: 0 0 80px rgba(61, 186, 78, 0.38); }
+}
+
+.orbit-dot {
+  top: 50%;
+  left: 50%;
+  margin: -6px 0 0 -6px;
+}
+
+.orbit-dot-1 { animation: orbitWide   18s linear infinite; }
+.orbit-dot-2 { animation: orbitMid    13s linear infinite reverse; }
+.orbit-dot-3 { animation: orbitNarrow 23s linear infinite; }
+
+@keyframes orbitWide {
+  from { transform: rotate(0deg)   translateX(150px) scaleY(0.42) rotate(0deg);    }
+  to   { transform: rotate(360deg) translateX(150px) scaleY(0.42) rotate(-360deg); }
+}
+@keyframes orbitMid {
+  from { transform: rotate(0deg)   translateX(112px) scaleY(0.65) rotate(0deg);    }
+  to   { transform: rotate(360deg) translateX(112px) scaleY(0.65) rotate(-360deg); }
+}
+@keyframes orbitNarrow {
+  from { transform: rotate(180deg) translateX(78px) rotate(-180deg); }
+  to   { transform: rotate(540deg) translateX(78px) rotate(-540deg); }
+}
+
+.iso-badge {
+  font-family: 'DM Sans', sans-serif;
+  white-space: nowrap;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.iso-badge-float-1 { animation: floatY 7s  ease-in-out infinite; }
+.iso-badge-float-2 { animation: floatY 9s  ease-in-out infinite 0.8s; }
+.iso-badge-float-3 { animation: floatY 11s ease-in-out infinite 1.6s; }
+
+@keyframes floatY {
+  0%, 100% { transform: translateY(0);     }
+  50%      { transform: translateY(-10px); }
+}
+
+/* ================================================
+   CTA BUTTONS
+   ================================================ */
+.cta-primary,
+.cta-secondary {
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-primary {
+  box-shadow: 0 0 0 0 rgba(61, 186, 78, 0);
+  transition: background var(--transition-base), box-shadow var(--transition-base), transform 200ms ease;
+}
+
+.cta-primary:hover {
+  box-shadow: 0 8px 24px rgba(61, 186, 78, 0.25);
+  transform: translateY(-1px);
+}
+
+.cta-secondary {
+  transition: border-color 300ms ease, color 300ms ease, transform 200ms ease;
+}
+
+.cta-secondary:hover { transform: translateY(-1px); }
+
+/* ================================================
+   SECTION HEADERS
+   Every section title is the source document's own
+   heading; this rule is the only decoration above it.
+   ================================================ */
+.rule-accent {
+  display: block;
+  width: 56px;
+  height: 2px;
+  background: var(--green);
+  margin-bottom: 1.75rem;
+}
+
+/* ================================================
+   GRID HAIRLINES
+   The gap-px grids draw their dividers with the
+   container background. Translucent white is too
+   faint over navy, so dark grids use a solid line.
+   ================================================ */
+.grid-lines-dark { background-color: #24394f; }
+
+/* ================================================
+   INDICADORES (Sobre la empresa)
+   ================================================ */
+.stat-item {
+  transition: transform var(--transition-base), background-color var(--transition-base);
+}
+
+.stat-item:hover {
+  transform: translateY(-3px);
+  background-color: #ffffff;
+}
+
+/* Unit that trails the animated figure ("+10 años", "7 normas") */
+.stat-unit {
+  font-size: 0.5em;
+  font-weight: 400;
+  color: var(--slate);
+  letter-spacing: 0.01em;
+}
+
+/* ================================================
+   MISIÓN Y VISIÓN
+   ================================================ */
+.purpose-card {
+  transition: background-color 500ms var(--ease-out-expo);
+}
+
+.purpose-card:hover { background-color: var(--navy-mid); }
+
+/* ================================================
+   SERVICIOS
+   ================================================ */
+.service-card {
+  transition: background-color 500ms var(--ease-out-expo),
+              transform var(--transition-base);
+}
+
+.service-card:hover { transform: translateY(-2px); }
+
+.service-icon svg { transition: transform 500ms var(--ease-out-expo); }
+.service-card:hover .service-icon svg { transform: scale(1.06) rotate(-2deg); }
+
+/* ================================================
+   NORMAS ISO
+   ================================================ */
+.norm-card {
+  position: relative;
+  transition: background-color 450ms var(--ease-out-expo), transform var(--transition-base);
+}
+
+.norm-card::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: var(--green);
+  transition: width 450ms var(--ease-out-expo);
+}
+
+.norm-card:hover {
+  background-color: var(--navy-mid);
+  transform: translateY(-2px);
+}
+
+.norm-card:hover::after { width: 100%; }
+
+/* ================================================
+   ¿ES OBLIGATORIO CERTIFICARSE?
+   ================================================ */
+.pillar-card {
+  transition: background-color var(--transition-base), transform var(--transition-base);
+}
+
+.pillar-card:hover {
+  background-color: #ffffff;
+  transform: translateY(-3px);
+}
+
+/* Closing note under the three pillars */
+.closing-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  margin-top: 2.5rem;
+  padding: 1.25rem 1.5rem;
+  border-left: 2px solid var(--green);
+  background: rgba(61, 186, 78, 0.05);
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--slate);
+}
+
+/* ================================================
+   AUTOMATIZACIÓN Y SOPORTE IT
+   ================================================ */
+.auto-card {
+  transition: background-color 450ms var(--ease-out-expo);
+}
+
+.auto-card:hover { background-color: var(--navy); }
+
+.auto-icon { transition: background-color 400ms ease, color 400ms ease, border-color 400ms ease; }
+
+/* ================================================
+   CUMPLIMIENTO NORMATIVO
+   ================================================ */
+.compliance-row {
+  transition: background-color 400ms ease, padding-left 400ms var(--ease-out-expo);
+}
+
+.compliance-row:hover {
+  background-color: #ffffff;
+  padding-left: 1.25rem;
+}
+
+/* ================================================
+   BENEFICIOS
+   ================================================ */
+.benefit-line {
+  transition: transform 300ms var(--ease-out-expo);
+}
+
+.benefit-line:hover { transform: translateX(4px); }
+
+/* ================================================
+   CAPACITACIÓN
+   ================================================ */
+.training-item {
+  position: relative;
+  padding-left: 2.25rem !important;
+  transition: background-color 300ms ease, color 300ms ease;
+}
+
+.training-item::before {
+  content: '';
+  position: absolute;
+  left: 1.25rem;
+  top: 1.45rem;
+  width: 5px;
+  height: 5px;
+  background: var(--green);
+  transform: rotate(45deg);
+}
+
+.training-item:hover {
+  background-color: #ffffff;
+  color: var(--navy);
+}
+
+.norm-ref {
+  color: var(--green-dark);
+  white-space: nowrap;
+}
+
+/* ================================================
+   PROCESO DE IMPLEMENTACIÓN
+   ================================================ */
+.process-step-card {
+  position: relative;
+}
+
+.step-num { transition: background-color 400ms ease, border-color 400ms ease; }
+
+/* ================================================
+   COMERCIALIZADORA
+   ================================================ */
+.product-card {
+  transition: background-color var(--transition-base), transform var(--transition-base);
+}
+
+.product-card:hover {
+  background-color: var(--cream);
+  transform: translateY(-3px);
+}
+
+.product-icon { transition: transform 400ms var(--ease-out-expo); }
+.product-card:hover .product-icon { transform: translateY(-2px) scale(1.05); }
+
+/* ================================================
+   CONTACT FORM
+   ================================================ */
+.form-field {
+  transition: background-color 300ms ease;
+}
+
+.form-field:focus-within {
+  background-color: rgba(61, 186, 78, 0.04);
+}
+
+.form-field input,
+.form-field textarea,
+.form-field select {
+  caret-color: var(--green);
+  transition: all 300ms ease;
+}
+
+.submit-btn {
+  transition: background-color var(--transition-base),
+              color var(--transition-base),
+              box-shadow var(--transition-base),
+              transform 200ms ease;
+}
+
+.submit-btn:hover {
+  box-shadow: 0 8px 24px rgba(61, 186, 78, 0.2);
+  transform: translateY(-1px);
+}
+
+/* ================================================
+   MODAL
+   ================================================ */
+#academia-modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#academia-modal.active #modal-content {
+  transform: translateY(0);
+}
+
+body.modal-open { overflow: hidden; }
+
+/* ================================================
+   SCROLL-TRIGGERED REVEAL ANIMATIONS
+   (applied via IntersectionObserver in script.js)
+   ================================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.8s var(--ease-out-expo),
+              transform 0.8s var(--ease-out-expo);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-32px);
+  transition: opacity 0.8s var(--ease-out-expo),
+              transform 0.8s var(--ease-out-expo);
+}
+
+.reveal-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(32px);
+  transition: opacity 0.8s var(--ease-out-expo),
+              transform 0.8s var(--ease-out-expo);
+}
+
+.reveal-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Hover transforms must not fight the reveal transform while hidden */
+.reveal:not(.visible):hover,
+.reveal-left:not(.visible):hover,
+.reveal-right:not(.visible):hover { transform: inherit; }
+
+/* ================================================
+   RESPONSIVE
+   ================================================ */
+
+@media (max-width: 640px) {
+  #hero h1 {
+    font-size: clamp(2.6rem, 10.5vw, 4.2rem);
+    line-height: 0.95;
+  }
+
+  .section-header h2 {
+    font-size: clamp(2.2rem, 9vw, 3.5rem);
+  }
+
+  .font-display { letter-spacing: -0.01em; }
+
+  .compliance-row:hover { padding-left: 0; }
+}
+
+/* Ultra-wide cap */
+@media (min-width: 1600px) {
+  .max-w-7xl { max-width: 1440px; }
+}
+
+/* ================================================
+   REDUCED MOTION
+   ================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .hero-tag, .hero-headline, .hero-sub, .hero-cta, .hero-sphere-wrap { opacity: 1; }
+}
+
+/* ================================================
+   PRINT
+   ================================================ */
+@media print {
+  #navbar,
+  #academia-modal,
+  #menu-toggle,
+  .hero-orb,
+  .hero-grid {
+    display: none !important;
+  }
+  body { background: white; color: black; }
+  a    { color: black; }
+  .reveal, .reveal-left, .reveal-right { opacity: 1 !important; transform: none !important; }
+}
