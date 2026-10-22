@@ -1,0 +1,52 @@
+# ============================================================================
+# Publicar la landing de Summit-Sphere en Cloudflare Pages
+#
+# Cada push a `main` sube index.html + script.js + styles.css al proyecto de
+# Pages `summit-sphere-landing`, que sirve summit-sphere.com y www.
+#
+# Secretos (Settings → Secrets and variables → Actions):
+#   CLOUDFLARE_API_TOKEN    Cloudflare → My Profile → API Tokens → Create Token
+#                           → plantilla "Edit Cloudflare Workers" o custom con
+#                           Account · Cloudflare Pages · Edit. Sólo esa cuenta.
+#   CLOUDFLARE_ACCOUNT_ID   Cloudflare → cualquier dominio → columna derecha
+#                           "Account ID" (es la misma parte <cuenta> del
+#                           endpoint de R2).
+#
+# ⚠️ Sólo se publica la carpeta `dist/` que arma el paso de abajo: así no se
+#    suben .github/ ni nada más que termine en el repo por accidente.
+# ============================================================================
+
+name: Publicar landing
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: landing-produccion
+  cancel-in-progress: true
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Armar dist/
+        run: |
+          mkdir -p dist
+          cp index.html script.js styles.css dist/
+          # Si después se agregan imágenes o favicon, van en assets/ y se copian aquí.
+          [ -d assets ] && cp -r assets dist/ || true
+          ls -la dist
+
+      - name: Publicar en Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken:  ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy dist --project-name=summit-sphere-landing --branch=main --commit-dirty=true
