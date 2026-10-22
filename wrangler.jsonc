@@ -1,0 +1,11 @@
+// Configuración del Worker que sirve la landing (Cloudflare Workers + static assets).
+// El nombre TIENE que coincidir con el Worker creado en el panel.
+{
+  "name": "summit-sphere-landing",
+  "compatibility_date": "2025-06-01",
+  "assets": {
+    // La arma el workflow: sólo index.html, styles.css, script.js y assets/.
+    "directory": "./dist",
+    "not_found_handling": "404-page"
+  }
+}

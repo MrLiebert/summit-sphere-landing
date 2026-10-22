@@ -1,19 +1,17 @@
 # ============================================================================
-# Publicar la landing de Summit-Sphere en Cloudflare Pages
+# Publicar la landing de Summit-Sphere en Cloudflare Workers (static assets)
 #
-# Cada push a `main` sube index.html + script.js + styles.css al proyecto de
-# Pages `summit-sphere-landing`, que sirve summit-sphere.com y www.
+# Cada push a `main` sube index.html + script.js + styles.css al Worker
+# `summit-sphere-landing` (definido en wrangler.jsonc), que sirve
+# summit-sphere.com y www.
 #
-# Secretos (Settings → Secrets and variables → Actions):
-#   CLOUDFLARE_API_TOKEN    Cloudflare → My Profile → API Tokens → Create Token
-#                           → plantilla "Edit Cloudflare Workers" o custom con
-#                           Account · Cloudflare Pages · Edit. Sólo esa cuenta.
-#   CLOUDFLARE_ACCOUNT_ID   Cloudflare → cualquier dominio → columna derecha
-#                           "Account ID" (es la misma parte <cuenta> del
-#                           endpoint de R2).
+# Secretos (Settings → Secrets and variables → Actions → Repository secrets):
+#   CLOUDFLARE_API_TOKEN    Cloudflare → My Profile → API Tokens. Permiso:
+#                           Account · Workers Scripts · Edit (sólo esa cuenta).
+#   CLOUDFLARE_ACCOUNT_ID   Cloudflare → Workers & Pages → columna derecha.
 #
 # ⚠️ Sólo se publica la carpeta `dist/` que arma el paso de abajo: así no se
-#    suben .github/ ni nada más que termine en el repo por accidente.
+#    suben .github/, wrangler.jsonc ni nada más del repo.
 # ============================================================================
 
 name: Publicar landing
@@ -44,9 +42,12 @@ jobs:
           [ -d assets ] && cp -r assets dist/ || true
           ls -la dist
 
-      - name: Publicar en Cloudflare Pages
+      - name: Publicar en Cloudflare Workers
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken:  ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy dist --project-name=summit-sphere-landing --branch=main --commit-dirty=true
+          # La versión que trae la action por defecto (3.x) es vieja para
+          # static assets. Se fija una 4.x conocida.
+          wranglerVersion: '4.20.0'
+          command: deploy
